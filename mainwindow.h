@@ -10,9 +10,13 @@
 #include "projectmanager.h"
 #include "componentmanager.h"
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "thememanager.h"
 =======
 >>>>>>> 9bd960c (V0.1)
+=======
+#include "thememanager.h"
+>>>>>>> 5b065cd (增加了上下移动组件的功能)
 
 class MainWindow : public QMainWindow
 {
@@ -20,10 +24,14 @@ class MainWindow : public QMainWindow
 
 public:
 <<<<<<< HEAD
+<<<<<<< HEAD
     explicit MainWindow(QWidget *parent = nullptr);
 =======
     MainWindow(QWidget *parent = nullptr);
 >>>>>>> 9bd960c (V0.1)
+=======
+    explicit MainWindow(QWidget *parent = nullptr);
+>>>>>>> 5b065cd (增加了上下移动组件的功能)
     ~MainWindow();
 
 private slots:
@@ -59,11 +67,25 @@ private:
 =======
     void onComponentDeleted(QStandardItem *item);
     void onComponentMoved(QStandardItem *item, QStandardItem *newParent);
+<<<<<<< HEAD
     void showProjectContextMenu(const QPoint &pos);
 >>>>>>> b22ee86 (组件列表中添加组件删除等功能)
 
 private:
 >>>>>>> 9bd960c (V0.1)
+=======
+
+    void moveComponentUp();
+    void moveComponentDown();
+    void onComponentOrderChanged(QStandardItem *item, bool moveUp);
+
+private:
+    void showProjectContextMenu(const QPoint &pos);
+    void changeTheme();
+    void setDefaultTheme();
+    void setAtomOneTheme();
+    void setSolarizedLightTheme();
+>>>>>>> 5b065cd (增加了上下移动组件的功能)
     void setupUI();
     void createActions();
     void createMenus();
@@ -78,14 +100,20 @@ private:
     ProjectManager *projectManager;
     ComponentManager *componentManager;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5b065cd (增加了上下移动组件的功能)
     ThemeManager *themeManager;
     QMenu *themeMenu;
     QMenu *editMenu;  // Add this line to declare editMenu
     QAction *defaultThemeAction;
     QAction *atomOneThemeAction;
     QAction *solarizedLightThemeAction;
+<<<<<<< HEAD
 =======
 >>>>>>> 9bd960c (V0.1)
+=======
+>>>>>>> 5b065cd (增加了上下移动组件的功能)
 
     // Actions
     QAction *newProjectAction;
@@ -99,13 +127,19 @@ private:
     QAction *configureComponentAction;
     QAction *exitAction;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5b065cd (增加了上下移动组件的功能)
     QAction *moveUpAction;
     QAction *moveDownAction;
 };
 
 #endif // MAINWINDOW_H
+<<<<<<< HEAD
 =======
 };
 
 #endif // MAINWINDOW_H
 >>>>>>> 9bd960c (V0.1)
+=======
+>>>>>>> 5b065cd (增加了上下移动组件的功能)

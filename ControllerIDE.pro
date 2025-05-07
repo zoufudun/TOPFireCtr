@@ -40,15 +40,20 @@ HEADERS += \
     main.cpp \
     mainwindow.cpp \
     projectmanager.cpp \
-    componentmanager.cpp
+    componentmanager.cpp \
+    thememanager.cpp
 
 HEADERS += \
     componentmanager.h \
     mainwindow.h \
     projectmanager.h \
+<<<<<<< HEAD
     projectmanager.h \
     componentmanager.h
 >>>>>>> 9bd960c (V0.1)
+=======
+    thememanager.h
+>>>>>>> 5b065cd (增加了上下移动组件的功能)
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -56,14 +61,19 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 RESOURCES += \
 <<<<<<< HEAD
     resources.qrc
+=======
+RESOURCES += resources.qrc
+>>>>>>> 5b065cd (增加了上下移动组件的功能)
 
 OTHER_FILES += \
     themes/default.qss \
     themes/atom_one.qss \
     themes/solarized_light.qss
+<<<<<<< HEAD
 
 CODECFORTR = UTF-8
 CODECFORSRC = UTF-8
@@ -73,3 +83,5 @@ CODECFORSRC = UTF-8
 =======
 RESOURCES += resources.qrc
 >>>>>>> d0afa2c (组件实现双击添加)
+=======
+>>>>>>> 5b065cd (增加了上下移动组件的功能)

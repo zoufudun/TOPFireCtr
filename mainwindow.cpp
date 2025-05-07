@@ -9,9 +9,13 @@
 #include <QInputDialog> // 添加此头文件
 #include <QMenu>        // 添加此头文件
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "thememanager.h"
 =======
 >>>>>>> 9bd960c (V0.1)
+=======
+#include "thememanager.h"
+>>>>>>> 5b065cd (增加了上下移动组件的功能)
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -21,28 +25,42 @@ MainWindow::MainWindow(QWidget *parent)
     
     setupUI();
 <<<<<<< HEAD
+<<<<<<< HEAD
     // 初始化主题管理器
     themeManager = new ThemeManager(this);
     
 =======
 >>>>>>> 9bd960c (V0.1)
+=======
+    // 初始化主题管理器
+    themeManager = new ThemeManager(this);
+    
+>>>>>>> 5b065cd (增加了上下移动组件的功能)
     createActions();
     createMenus();
     createToolbars();
     createDockWindows();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9bd960c (V0.1)
+=======
+
+>>>>>>> 5b065cd (增加了上下移动组件的功能)
     
     setWindowTitle(tr("Controller IDE"));
     setMinimumSize(800, 600);
     
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5b065cd (增加了上下移动组件的功能)
     // 连接组件管理器信号
     connect(componentManager, &ComponentManager::componentAdded, this, &MainWindow::onComponentAdded);
     connect(componentManager, &ComponentManager::componentDeleted, this, &MainWindow::onComponentDeleted);
     connect(componentManager, &ComponentManager::componentMoved, this, &MainWindow::onComponentMoved);
+<<<<<<< HEAD
     // 使用函数指针明确指定信号类型
     connect(componentManager,
             static_cast<void (ComponentManager::*)(QStandardItem*, int, int)>(&ComponentManager::componentOrderChanged),
@@ -62,6 +80,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(componentManager, &ComponentManager::componentMoved,
             this, &MainWindow::onComponentMoved);
 >>>>>>> 9bd960c (V0.1)
+=======
+    connect(componentManager, &ComponentManager::componentOrderChanged, this, &MainWindow::onComponentOrderChanged);
+>>>>>>> 5b065cd (增加了上下移动组件的功能)
 }
 
 MainWindow::~MainWindow()
@@ -106,6 +127,9 @@ void MainWindow::createActions()
     moveComponentAction = new QAction(tr("移动组件"), this);
     connect(moveComponentAction, &QAction::triggered, this, &MainWindow::moveComponent);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5b065cd (增加了上下移动组件的功能)
     
     // 主题切换动作
     defaultThemeAction = new QAction(tr("默认主题"), this);
@@ -131,8 +155,11 @@ void MainWindow::createActions()
     connect(moveDownAction, &QAction::triggered, this, &MainWindow::moveComponentDown);
     
 
+<<<<<<< HEAD
 =======
 >>>>>>> 9bd960c (V0.1)
+=======
+>>>>>>> 5b065cd (增加了上下移动组件的功能)
 }
 
 void MainWindow::createMenus()
@@ -147,16 +174,24 @@ void MainWindow::createMenus()
     fileMenu->addAction(exitAction);
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     
 =======
 >>>>>>> 9bd960c (V0.1)
+=======
+
+    
+>>>>>>> 5b065cd (增加了上下移动组件的功能)
     QMenu *componentMenu = menuBar()->addMenu(tr("组件"));
     componentMenu->addAction(addComponentAction);
     componentMenu->addAction(deleteComponentAction); // 添加删除组件菜单项
     componentMenu->addAction(moveComponentAction);   // 添加移动组件菜单项
     componentMenu->addAction(configureComponentAction);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5b065cd (增加了上下移动组件的功能)
     
     // 添加主题菜单
     themeMenu = menuBar()->addMenu(tr("主题"));
@@ -170,8 +205,11 @@ void MainWindow::createMenus()
     editMenu->addSeparator();
     editMenu->addAction(moveUpAction);
     editMenu->addAction(moveDownAction);
+<<<<<<< HEAD
 =======
 >>>>>>> 9bd960c (V0.1)
+=======
+>>>>>>> 5b065cd (增加了上下移动组件的功能)
 }
 
 void MainWindow::createToolbars()
@@ -494,10 +532,14 @@ void MainWindow::onComponentMoved(QStandardItem *item, QStandardItem *newParent)
         QStandardItem *oldParent = item->parent();
         if (oldParent) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5b065cd (增加了上下移动组件的功能)
             // 保存项目文本，因为移除后 item 可能无效
             QString itemText = item->text();
             QVariant itemData = item->data(Qt::UserRole);
             
+<<<<<<< HEAD
             // 创建一个新的项，复制原项的数据
             QStandardItem *newItem = new QStandardItem(itemText);
             newItem->setData(itemData, Qt::UserRole);
@@ -506,6 +548,11 @@ void MainWindow::onComponentMoved(QStandardItem *item, QStandardItem *newParent)
             QStandardItem *newItem = new QStandardItem(item->text());
             newItem->setData(item->data(Qt::UserRole), Qt::UserRole);
 >>>>>>> 9bd960c (V0.1)
+=======
+            // 创建一个新的项，复制原项的数据
+            QStandardItem *newItem = new QStandardItem(itemText);
+            newItem->setData(itemData, Qt::UserRole);
+>>>>>>> 5b065cd (增加了上下移动组件的功能)
             
             // 从原位置移除
             oldParent->removeRow(item->row());
@@ -514,6 +561,7 @@ void MainWindow::onComponentMoved(QStandardItem *item, QStandardItem *newParent)
             newParent->appendRow(newItem);
             
             projectManager->setUnsavedChanges(true);
+<<<<<<< HEAD
 <<<<<<< HEAD
             statusBar()->showMessage(tr("组件已移动: %1").arg(itemText), 3000);
         }
@@ -736,6 +784,9 @@ void MainWindow::onComponentConfigured(QStandardItem *item)
 }
 =======
             statusBar()->showMessage(tr("组件已移动: %1").arg(item->text()), 3000);
+=======
+            statusBar()->showMessage(tr("组件已移动: %1").arg(itemText), 3000);
+>>>>>>> 5b065cd (增加了上下移动组件的功能)
         }
     }
 }
@@ -762,7 +813,7 @@ void MainWindow::showProjectContextMenu(const QPoint &pos)
         connect(addAction, &QAction::triggered, this, &MainWindow::addComponent);
         contextMenu.addAction(addAction);
         
-        // 如果不是根节点，添加组件配置和删除选项
+        // 如果不是根节点，添加组件配置、删除和移动选项
         if (index.parent().isValid()) {
             QAction *configureAction = new QAction(tr("配置组件"), this);
             connect(configureAction, &QAction::triggered, this, [this]() {
@@ -793,10 +844,105 @@ void MainWindow::showProjectContextMenu(const QPoint &pos)
                 }
             });
             contextMenu.addAction(moveAction);
+            
+            // 添加上移和下移选项
+            contextMenu.addSeparator();
+            
+            QAction *moveUpAction = new QAction(tr("上移"), this);
+            connect(moveUpAction, &QAction::triggered, this, &MainWindow::moveComponentUp);
+            contextMenu.addAction(moveUpAction);
+            
+            QAction *moveDownAction = new QAction(tr("下移"), this);
+            connect(moveDownAction, &QAction::triggered, this, &MainWindow::moveComponentDown);
+            contextMenu.addAction(moveDownAction);
         }
         
         // 显示上下文菜单
         contextMenu.exec(projectTreeView->viewport()->mapToGlobal(pos));
     }
 }
+<<<<<<< HEAD
 >>>>>>> b22ee86 (组件列表中添加组件删除等功能)
+=======
+
+void MainWindow::setDefaultTheme()
+{
+    themeManager->applyTheme(ThemeManager::Default);
+    defaultThemeAction->setChecked(true);
+    atomOneThemeAction->setChecked(false);
+    solarizedLightThemeAction->setChecked(false);
+    statusBar()->showMessage(tr("已应用默认主题"), 3000);
+}
+
+void MainWindow::setAtomOneTheme()
+{
+    themeManager->applyTheme(ThemeManager::AtomOne);
+    defaultThemeAction->setChecked(false);
+    atomOneThemeAction->setChecked(true);
+    solarizedLightThemeAction->setChecked(false);
+    statusBar()->showMessage(tr("已应用ATOM ONE主题"), 3000);
+}
+
+void MainWindow::setSolarizedLightTheme()
+{
+    themeManager->applyTheme(ThemeManager::SolarizedLight);
+    defaultThemeAction->setChecked(false);
+    atomOneThemeAction->setChecked(false);
+    solarizedLightThemeAction->setChecked(true);
+    statusBar()->showMessage(tr("已应用Solarized Light主题"), 3000);
+}
+
+void MainWindow::changeTheme()
+{
+    // This method can either show a theme selection dialog
+    // or toggle between themes. For simplicity, I'll implement
+    // a basic theme rotation.
+    
+    if (defaultThemeAction->isChecked()) {
+        setAtomOneTheme();
+    } else if (atomOneThemeAction->isChecked()) {
+        setSolarizedLightTheme();
+    } else {
+        setDefaultTheme();
+    }
+}
+
+
+void MainWindow::onComponentOrderChanged(QStandardItem *item, bool moveUp)
+{
+    if (item) {
+        // 选中移动后的项
+        QModelIndex index = item->index();
+        projectTreeView->setCurrentIndex(index);
+        
+        // 标记项目有未保存的更改
+        projectManager->setUnsavedChanges(true);
+        
+        QString direction = moveUp ? "上移" : "下移";
+        statusBar()->showMessage(tr("组件已%1: %2").arg(direction).arg(item->text()), 3000);
+    }
+}
+
+void MainWindow::moveComponentUp()
+{
+    QModelIndex currentIndex = projectTreeView->currentIndex();
+    if (currentIndex.isValid() && currentIndex.parent().isValid()) {
+        QStandardItem *item = projectManager->projectModel()->itemFromIndex(currentIndex);
+        componentManager->moveComponentUp(item);
+    } else {
+        QMessageBox::warning(this, tr("移动组件"), tr("请先选择要移动的组件"));
+    }
+}
+
+void MainWindow::moveComponentDown()
+{
+    QModelIndex currentIndex = projectTreeView->currentIndex();
+    if (currentIndex.isValid() && currentIndex.parent().isValid()) {
+        QStandardItem *item = projectManager->projectModel()->itemFromIndex(currentIndex);
+        componentManager->moveComponentDown(item);
+    } else {
+        QMessageBox::warning(this, tr("移动组件"), tr("请先选择要移动的组件"));
+    }
+}
+
+>>>>>>> 5b065cd (增加了上下移动组件的功能)

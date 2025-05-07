@@ -417,6 +417,9 @@ void ComponentManager::showMoveComponentDialog(QStandardItem *item)
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5b065cd (增加了上下移动组件的功能)
 void ComponentManager::moveComponentUp(QStandardItem *item)
 {
     if (!item) {
