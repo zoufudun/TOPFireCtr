@@ -354,14 +354,20 @@ void MainWindow::onComponentAdded(const ComponentInfo &component)
         QStandardItem *item = new QStandardItem(component.name);
         item->setData(component.type, Qt::UserRole);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
         
         // 设置图标
         if (!component.iconPath.isEmpty()) {
             item->setIcon(QIcon(component.iconPath));
         }
         
+<<<<<<< HEAD
 =======
 >>>>>>> 9bd960c (V0.1)
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
         rootItem->appendRow(item);
     } else if (component.level == 2) {
         // 第二层级 - 其他模块，需要添加到主机模块下
@@ -392,14 +398,20 @@ void MainWindow::onComponentAdded(const ComponentInfo &component)
         QStandardItem *item = new QStandardItem(component.name);
         item->setData(component.type, Qt::UserRole);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
         
         // 设置图标
         if (!component.iconPath.isEmpty()) {
             item->setIcon(QIcon(component.iconPath));
         }
         
+<<<<<<< HEAD
 =======
 >>>>>>> 9bd960c (V0.1)
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
         hostItem->appendRow(item);
     }
     

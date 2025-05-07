@@ -49,9 +49,13 @@ void ComponentManager::initializeComponentTypes()
     hostModule.description = "控制器主机模块";
     hostModule.level = 1;
 <<<<<<< HEAD
+<<<<<<< HEAD
     hostModule.iconPath = ":/icons/host.png";  // 设置图标路径
 =======
 >>>>>>> 9bd960c (V0.1)
+=======
+    hostModule.iconPath = ":/icons/host.png";  // 设置图标路径
+>>>>>>> d0afa2c (组件实现双击添加)
     m_componentTypes.append(hostModule);
     
     // 第二层级 - 其他模块
@@ -60,12 +64,16 @@ void ComponentManager::initializeComponentTypes()
     };
     
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
     QStringList iconPaths = {
         ":/icons/loop.png", ":/icons/di.png", ":/icons/do.png", 
         ":/icons/ai.png", ":/icons/relay.png", ":/icons/comm.png"
     };
     
     for (int i = 0; i < secondLevelModules.size(); ++i) {
+<<<<<<< HEAD
         ComponentInfo module;
         module.name = secondLevelModules[i];
         QString typeStr = secondLevelModules[i];
@@ -75,13 +83,19 @@ void ComponentManager::initializeComponentTypes()
         module.iconPath = i < iconPaths.size() ? iconPaths[i] : ":/icons/default.png";
 =======
     for (const QString &moduleName : secondLevelModules) {
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
         ComponentInfo module;
-        module.name = moduleName;
-        QString typeStr = moduleName;
+        module.name = secondLevelModules[i];
+        QString typeStr = secondLevelModules[i];
         module.type = typeStr.replace("模块", "Module");
-        module.description = QString("%1，连接到主机模块").arg(moduleName);
+        module.description = QString("%1，连接到主机模块").arg(secondLevelModules[i]);
         module.level = 2;
+<<<<<<< HEAD
 >>>>>>> 9bd960c (V0.1)
+=======
+        module.iconPath = i < iconPaths.size() ? iconPaths[i] : ":/icons/default.png";
+>>>>>>> d0afa2c (组件实现双击添加)
         m_componentTypes.append(module);
     }
 }
@@ -108,6 +122,9 @@ void ComponentManager::showAddComponentDialog()
         item->setData(Qt::UserRole, component.type);
         item->setData(Qt::UserRole + 1, component.level);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
         item->setData(Qt::UserRole + 2, component.iconPath);
         
         // 设置图标
@@ -115,8 +132,11 @@ void ComponentManager::showAddComponentDialog()
             item->setIcon(QIcon(component.iconPath));
         }
         
+<<<<<<< HEAD
 =======
 >>>>>>> 9bd960c (V0.1)
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
         componentList->addItem(item);
     }
     layout->addWidget(componentList);
@@ -138,13 +158,19 @@ void ComponentManager::showAddComponentDialog()
     });
     
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
     // 添加双击处理
     connect(componentList, &QListWidget::itemDoubleClicked, [&dialog](QListWidgetItem *) {
         dialog.accept();
     });
     
+<<<<<<< HEAD
 =======
 >>>>>>> 9bd960c (V0.1)
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
     QDialogButtonBox *buttonBox = new QDialogButtonBox(
         QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &dialog);
     layout->addWidget(buttonBox);
@@ -170,9 +196,13 @@ void ComponentManager::showAddComponentDialog()
             QString componentType = selectedItem->data(Qt::UserRole).toString();
             int componentLevel = selectedItem->data(Qt::UserRole + 1).toInt();
 <<<<<<< HEAD
+<<<<<<< HEAD
             QString iconPath = selectedItem->data(Qt::UserRole + 2).toString();
 =======
 >>>>>>> 9bd960c (V0.1)
+=======
+            QString iconPath = selectedItem->data(Qt::UserRole + 2).toString();
+>>>>>>> d0afa2c (组件实现双击添加)
             
             // 创建组件信息并发送信号
             ComponentInfo component;
@@ -180,9 +210,13 @@ void ComponentManager::showAddComponentDialog()
             component.type = componentType;
             component.level = componentLevel;
 <<<<<<< HEAD
+<<<<<<< HEAD
             component.iconPath = iconPath;
 =======
 >>>>>>> 9bd960c (V0.1)
+=======
+            component.iconPath = iconPath;
+>>>>>>> d0afa2c (组件实现双击添加)
             
             // 查找完整的组件信息
             for (const ComponentInfo &info : m_componentTypes) {

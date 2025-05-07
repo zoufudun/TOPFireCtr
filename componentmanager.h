@@ -1,14 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
 /*
  * @Description: 
  * @Version: 1.0
  * @Autor: PhodonZou
  * @Date: 2025-05-07 11:48:40
  * @LastEditors: PhodonZou
+<<<<<<< HEAD
  * @LastEditTime: 2025-05-07 19:20:55
  */
 =======
 >>>>>>> 9bd960c (V0.1)
+=======
+ * @LastEditTime: 2025-05-07 16:48:23
+ */
+>>>>>>> d0afa2c (组件实现双击添加)
 #ifndef COMPONENTMANAGER_H
 #define COMPONENTMANAGER_H
 
@@ -49,7 +57,11 @@ struct ComponentInfo {
     QString type;        // 组件类型
     QString description; // 组件描述
     int level;           // 组件层级 (1: 主机模块, 2: 其他模块)
+<<<<<<< HEAD
 >>>>>>> 9bd960c (V0.1)
+=======
+    QString iconPath;    // 组件图标路径
+>>>>>>> d0afa2c (组件实现双击添加)
 };
 
 class ComponentManager : public QObject

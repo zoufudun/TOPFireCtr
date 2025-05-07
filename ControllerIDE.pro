@@ -55,6 +55,7 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
+<<<<<<< HEAD
 RESOURCES += \
 <<<<<<< HEAD
     resources.qrc
@@ -69,3 +70,6 @@ CODECFORSRC = UTF-8
 =======
     resources.qrc
 >>>>>>> 9bd960c (V0.1)
+=======
+RESOURCES += resources.qrc
+>>>>>>> d0afa2c (组件实现双击添加)

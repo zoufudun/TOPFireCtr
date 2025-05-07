@@ -156,9 +156,13 @@ compiler_rcc_clean:
 debug/qrc_resources.cpp: ../../resources.qrc \
 		D:/Soft/Qt/6.4.0/mingw_64/bin/rcc.exe \
 <<<<<<< HEAD
+<<<<<<< HEAD
 		../../themes/default.qss \
 		../../themes/atom_one.qss \
 		../../themes/solarized_light.qss \
+=======
+		../../components/default_components.xml \
+>>>>>>> d0afa2c (组件实现双击添加)
 		../../icons/ai.png \
 		../../icons/loop.png \
 		../../icons/relay.png \
@@ -167,9 +171,12 @@ debug/qrc_resources.cpp: ../../resources.qrc \
 		../../icons/di.png \
 		../../icons/do.png \
 		../../icons/host.png
+<<<<<<< HEAD
 =======
 		../../default_components.xml
 >>>>>>> 9bd960c (V0.1)
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
 	D:\Soft\Qt\6.4.0\mingw_64\bin\rcc.exe -name resources --no-zstd ..\..\resources.qrc -o debug\qrc_resources.cpp
 
 compiler_moc_predefs_make_all: debug/moc_predefs.h
@@ -261,6 +268,9 @@ debug/moc_componentmanager.cpp: ../../componentmanager.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/QList \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/QString \
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/QStandardItem \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qstandarditemmodel.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qtguiglobal.h \
@@ -300,8 +310,11 @@ debug/moc_componentmanager.cpp: ../../componentmanager.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qpixmap.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qfont.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qicon.h \
+<<<<<<< HEAD
 =======
 >>>>>>> 9bd960c (V0.1)
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
 		debug/moc_predefs.h \
 		D:/Soft/Qt/6.4.0/mingw_64/bin/moc.exe
 	D:\Soft\Qt\6.4.0\mingw_64\bin\moc.exe $(DEFINES) --include E:/QtHub/ControllerIDE/build/Desktop_Qt_6_4_0_MinGW_64_bit-Debug/debug/moc_predefs.h -ID:/Soft/Qt/6.4.0/mingw_64/mkspecs/win32-g++ -IE:/QtHub/ControllerIDE -ID:/Soft/Qt/6.4.0/mingw_64/include -ID:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets -ID:/Soft/Qt/6.4.0/mingw_64/include/QtGui -ID:/Soft/Qt/6.4.0/mingw_64/include/QtXml -ID:/Soft/Qt/6.4.0/mingw_64/include/QtCore -I. -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/Soft/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\..\componentmanager.h -o debug\moc_componentmanager.cpp
@@ -474,15 +487,21 @@ debug/moc_mainwindow.cpp: ../../mainwindow.h \
 		../../projectmanager.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/QString \
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/QStandardItemModel \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qstandarditemmodel.h \
 		../../componentmanager.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/QStandardItem \
+<<<<<<< HEAD
 		../../thememanager.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/QMap \
 =======
 		../../componentmanager.h \
 >>>>>>> 9bd960c (V0.1)
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
 		debug/moc_predefs.h \
 		D:/Soft/Qt/6.4.0/mingw_64/bin/moc.exe
 	D:\Soft\Qt\6.4.0\mingw_64\bin\moc.exe $(DEFINES) --include E:/QtHub/ControllerIDE/build/Desktop_Qt_6_4_0_MinGW_64_bit-Debug/debug/moc_predefs.h -ID:/Soft/Qt/6.4.0/mingw_64/mkspecs/win32-g++ -IE:/QtHub/ControllerIDE -ID:/Soft/Qt/6.4.0/mingw_64/include -ID:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets -ID:/Soft/Qt/6.4.0/mingw_64/include/QtGui -ID:/Soft/Qt/6.4.0/mingw_64/include/QtXml -ID:/Soft/Qt/6.4.0/mingw_64/include/QtCore -I. -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/Soft/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\..\mainwindow.h -o debug\moc_mainwindow.cpp
@@ -560,6 +579,9 @@ debug/moc_projectmanager.cpp: ../../projectmanager.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qbindingstorage.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/QString \
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/QStandardItemModel \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qstandarditemmodel.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qtguiglobal.h \
@@ -599,8 +621,11 @@ debug/moc_projectmanager.cpp: ../../projectmanager.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qpixmap.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qfont.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qicon.h \
+<<<<<<< HEAD
 =======
 >>>>>>> 9bd960c (V0.1)
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
 		debug/moc_predefs.h \
 		D:/Soft/Qt/6.4.0/mingw_64/bin/moc.exe
 	D:\Soft\Qt\6.4.0\mingw_64\bin\moc.exe $(DEFINES) --include E:/QtHub/ControllerIDE/build/Desktop_Qt_6_4_0_MinGW_64_bit-Debug/debug/moc_predefs.h -ID:/Soft/Qt/6.4.0/mingw_64/mkspecs/win32-g++ -IE:/QtHub/ControllerIDE -ID:/Soft/Qt/6.4.0/mingw_64/include -ID:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets -ID:/Soft/Qt/6.4.0/mingw_64/include/QtGui -ID:/Soft/Qt/6.4.0/mingw_64/include/QtXml -ID:/Soft/Qt/6.4.0/mingw_64/include/QtCore -I. -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/Soft/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\..\projectmanager.h -o debug\moc_projectmanager.cpp
@@ -682,6 +707,7 @@ debug/moc_projectmanager.cpp: ../../projectmanager.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qbindingstorage.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/QString \
 <<<<<<< HEAD
+<<<<<<< HEAD
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/QMap \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qmap.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qshareddata.h \
@@ -690,6 +716,47 @@ debug/moc_projectmanager.cpp: ../../projectmanager.h \
 		D:/Soft/Qt/6.4.0/mingw_64/bin/moc.exe
 	D:\Soft\Qt\6.4.0\mingw_64\bin\moc.exe $(DEFINES) --include E:/QtHub/ControllerIDE/build/Desktop_Qt_6_4_0_MinGW_64_bit-Debug/debug/moc_predefs.h -ID:/Soft/Qt/6.4.0/mingw_64/mkspecs/win32-g++ -IE:/QtHub/ControllerIDE -ID:/Soft/Qt/6.4.0/mingw_64/include -ID:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets -ID:/Soft/Qt/6.4.0/mingw_64/include/QtGui -ID:/Soft/Qt/6.4.0/mingw_64/include/QtXml -ID:/Soft/Qt/6.4.0/mingw_64/include/QtCore -I. -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/Soft/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\..\thememanager.h -o debug\moc_thememanager.cpp
 =======
+=======
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/QStandardItemModel \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qstandarditemmodel.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qtguiglobal.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qtgui-config.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qtguiexports.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qabstractitemmodel.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qhash.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qvariant.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qdebug.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qtextstream.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qstringconverter_base.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qcontiguouscache.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qsharedpointer.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qshareddata.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qsharedpointer_impl.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qmap.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qshareddata_impl.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qset.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qvarlengtharray.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qbrush.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qpoint.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qcolor.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qrgb.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qrgba64.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qimage.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qpaintdevice.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qwindowdefs.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qwindowdefs_win.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qrect.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qmargins.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qsize.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qpixelformat.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qtransform.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qpolygon.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qregion.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qline.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qpixmap.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qfont.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qicon.h \
+>>>>>>> d0afa2c (组件实现双击添加)
 		debug/moc_predefs.h \
 		D:/Soft/Qt/6.4.0/mingw_64/bin/moc.exe
 	D:\Soft\Qt\6.4.0\mingw_64\bin\moc.exe $(DEFINES) --include E:/QtHub/ControllerIDE/build/Desktop_Qt_6_4_0_MinGW_64_bit-Debug/debug/moc_predefs.h -ID:/Soft/Qt/6.4.0/mingw_64/mkspecs/win32-g++ -IE:/QtHub/ControllerIDE -ID:/Soft/Qt/6.4.0/mingw_64/include -ID:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets -ID:/Soft/Qt/6.4.0/mingw_64/include/QtGui -ID:/Soft/Qt/6.4.0/mingw_64/include/QtXml -ID:/Soft/Qt/6.4.0/mingw_64/include/QtCore -I. -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/Soft/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\..\projectmanager.h -o debug\moc_projectmanager.cpp
@@ -767,6 +834,45 @@ debug/moc_componentmanager.cpp: ../../componentmanager.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qbindingstorage.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/QList \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/QString \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/QStandardItem \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qstandarditemmodel.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qtguiglobal.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qtgui-config.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qtguiexports.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qabstractitemmodel.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qhash.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qvariant.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qdebug.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qtextstream.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qstringconverter_base.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qcontiguouscache.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qsharedpointer.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qshareddata.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qsharedpointer_impl.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qmap.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qshareddata_impl.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qset.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qvarlengtharray.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qbrush.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qpoint.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qcolor.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qrgb.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qrgba64.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qimage.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qpaintdevice.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qwindowdefs.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qwindowdefs_win.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qrect.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qmargins.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qsize.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qpixelformat.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qtransform.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qpolygon.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qregion.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qline.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qpixmap.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qfont.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qicon.h \
 		debug/moc_predefs.h \
 		D:/Soft/Qt/6.4.0/mingw_64/bin/moc.exe
 	D:\Soft\Qt\6.4.0\mingw_64\bin\moc.exe $(DEFINES) --include E:/QtHub/ControllerIDE/build/Desktop_Qt_6_4_0_MinGW_64_bit-Debug/debug/moc_predefs.h -ID:/Soft/Qt/6.4.0/mingw_64/mkspecs/win32-g++ -IE:/QtHub/ControllerIDE -ID:/Soft/Qt/6.4.0/mingw_64/include -ID:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets -ID:/Soft/Qt/6.4.0/mingw_64/include/QtGui -ID:/Soft/Qt/6.4.0/mingw_64/include/QtXml -ID:/Soft/Qt/6.4.0/mingw_64/include/QtCore -I. -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/Soft/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/Soft/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\..\componentmanager.h -o debug\moc_componentmanager.cpp
@@ -958,15 +1064,21 @@ debug/main.o: ../../main.cpp ../../mainwindow.h \
 		../../projectmanager.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/QString \
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/QStandardItemModel \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qstandarditemmodel.h \
 		../../componentmanager.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/QStandardItem \
+<<<<<<< HEAD
 		../../thememanager.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/QMap \
 =======
 		../../componentmanager.h \
 >>>>>>> 9bd960c (V0.1)
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/QApplication \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/qapplication.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qcoreapplication.h \
@@ -1159,15 +1271,21 @@ debug/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		../../projectmanager.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/QString \
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/QStandardItemModel \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qstandarditemmodel.h \
 		../../componentmanager.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/QStandardItem \
+<<<<<<< HEAD
 		../../thememanager.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/QMap \
 =======
 		../../componentmanager.h \
 >>>>>>> 9bd960c (V0.1)
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/QFileDialog \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/qfiledialog.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qdir.h \
@@ -1191,6 +1309,9 @@ debug/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/qtreewidget.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/qtreewidgetitemiterator.h \
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/QInputDialog \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/qinputdialog.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/qlineedit.h \
@@ -1200,10 +1321,13 @@ debug/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qpen.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qtextoption.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/QMenu
+<<<<<<< HEAD
 =======
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/QStandardItemModel \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qstandarditemmodel.h
 >>>>>>> 9bd960c (V0.1)
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\..\mainwindow.cpp
 
 debug/projectmanager.o: ../../projectmanager.cpp ../../projectmanager.h \
@@ -1278,6 +1402,9 @@ debug/projectmanager.o: ../../projectmanager.cpp ../../projectmanager.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qobject_impl.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qbindingstorage.h \
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/QString \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/QStandardItemModel \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qstandarditemmodel.h \
@@ -1318,9 +1445,12 @@ debug/projectmanager.o: ../../projectmanager.cpp ../../projectmanager.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qpixmap.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qfont.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qicon.h
+<<<<<<< HEAD
 =======
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/QString
 >>>>>>> 9bd960c (V0.1)
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\projectmanager.o ..\..\projectmanager.cpp
 
 debug/componentmanager.o: ../../componentmanager.cpp ../../componentmanager.h \
@@ -1397,6 +1527,7 @@ debug/componentmanager.o: ../../componentmanager.cpp ../../componentmanager.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/QList \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/QString \
 <<<<<<< HEAD
+<<<<<<< HEAD
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/QStandardItem \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qstandarditemmodel.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qtguiglobal.h \
@@ -1475,20 +1606,60 @@ debug/componentmanager.o: ../../componentmanager.cpp ../../componentmanager.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qkeysequence.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qpalette.h \
 =======
+=======
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/QStandardItem \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qstandarditemmodel.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qtguiglobal.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qtgui-config.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qtguiexports.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qabstractitemmodel.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qhash.h \
+>>>>>>> d0afa2c (组件实现双击添加)
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qvariant.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qdebug.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qtextstream.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qstringconverter_base.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qcontiguouscache.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qsharedpointer.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qshareddata.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qsharedpointer_impl.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qmap.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qshareddata_impl.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qset.h \
-		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qhash.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qvarlengtharray.h \
-		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qpalette.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qbrush.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qpoint.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qcolor.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qrgb.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qrgba64.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qimage.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qpaintdevice.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qwindowdefs.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qwindowdefs_win.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qrect.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qmargins.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qsize.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qpixelformat.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qtransform.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qpolygon.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qregion.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qline.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qpixmap.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qfont.h \
+<<<<<<< HEAD
 >>>>>>> 9bd960c (V0.1)
+=======
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qicon.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/QDialog \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/qdialog.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/qwidget.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qaction.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qkeysequence.h \
+		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qpalette.h \
+>>>>>>> d0afa2c (组件实现双击添加)
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qfontmetrics.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qfontinfo.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/qsizepolicy.h \
@@ -1522,9 +1693,12 @@ debug/componentmanager.o: ../../componentmanager.cpp ../../componentmanager.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/qframe.h \
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qabstractitemmodel.h \
 >>>>>>> 9bd960c (V0.1)
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtCore/qitemselectionmodel.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/qstyleoption.h \
@@ -1554,6 +1728,9 @@ debug/componentmanager.o: ../../componentmanager.cpp ../../componentmanager.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/QTreeWidgetItem \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/QDialogButtonBox \
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/QLineEdit \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/qlineedit.h \
@@ -1562,6 +1739,7 @@ debug/componentmanager.o: ../../componentmanager.cpp ../../componentmanager.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qpen.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtGui/qtextoption.h \
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/QTreeView
+<<<<<<< HEAD
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\componentmanager.o ..\..\componentmanager.cpp
 
 debug/thememanager.o: ../../thememanager.cpp ../../thememanager.h \
@@ -1714,6 +1892,8 @@ debug/thememanager.o: ../../thememanager.cpp ../../thememanager.h \
 
 =======
 		D:/Soft/Qt/6.4.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h
+=======
+>>>>>>> d0afa2c (组件实现双击添加)
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\componentmanager.o ..\..\componentmanager.cpp
 
 >>>>>>> 9bd960c (V0.1)

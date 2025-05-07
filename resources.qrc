@@ -1,7 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!DOCTYPE RCC>
 <RCC version="1.0">
     <qresource prefix="/">
+=======
+<!DOCTYPE RCC>
+
+<RCC version="1.0">
+    <qresource prefix="/">
+        <file>components/default_components.xml</file>
+>>>>>>> d0afa2c (组件实现双击添加)
         <file>icons/host.png</file>
         <file>icons/loop.png</file>
         <file>icons/di.png</file>
@@ -10,6 +18,7 @@
         <file>icons/relay.png</file>
         <file>icons/comm.png</file>
         <file>icons/default.png</file>
+<<<<<<< HEAD
         <file>themes/default.qss</file>
         <file>themes/atom_one.qss</file>
         <file>themes/solarized_light.qss</file>
@@ -22,3 +31,7 @@
     </qresource>
 </RCC>
 >>>>>>> 9bd960c (V0.1)
+=======
+    </qresource>
+</RCC>
+>>>>>>> d0afa2c (组件实现双击添加)
