@@ -16,6 +16,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+<<<<<<< HEAD
     componentmanager.cpp \
     dimodule.cpp \
     dimoduleconfigdialog.cpp \
@@ -35,6 +36,19 @@ HEADERS += \
     mainwindow.h \
     projectmanager.h \
     thememanager.h
+=======
+    main.cpp \
+    mainwindow.cpp \
+    projectmanager.cpp \
+    componentmanager.cpp
+
+HEADERS += \
+    componentmanager.h \
+    mainwindow.h \
+    projectmanager.h \
+    projectmanager.h \
+    componentmanager.h
+>>>>>>> 9bd960c (V0.1)
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -42,6 +56,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
+<<<<<<< HEAD
     resources.qrc
 
 OTHER_FILES += \
@@ -51,3 +66,6 @@ OTHER_FILES += \
 
 CODECFORTR = UTF-8
 CODECFORSRC = UTF-8
+=======
+    resources.qrc
+>>>>>>> 9bd960c (V0.1)

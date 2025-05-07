@@ -9,14 +9,21 @@
 #include <QStatusBar>
 #include "projectmanager.h"
 #include "componentmanager.h"
+<<<<<<< HEAD
 #include "thememanager.h"
+=======
+>>>>>>> 9bd960c (V0.1)
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
+<<<<<<< HEAD
     explicit MainWindow(QWidget *parent = nullptr);
+=======
+    MainWindow(QWidget *parent = nullptr);
+>>>>>>> 9bd960c (V0.1)
     ~MainWindow();
 
 private slots:
@@ -30,6 +37,7 @@ private slots:
     void moveComponent();           // 添加移动组件的槽函数
     void configureComponent();
     void onComponentAdded(const ComponentInfo &component);
+<<<<<<< HEAD
     void onComponentDeleted(QStandardItem *item);
     void onComponentMoved(QStandardItem *item, QStandardItem *newParent);
     void onComponentConfigured(QStandardItem *item);
@@ -44,6 +52,12 @@ private:
     void setDefaultTheme();
     void setAtomOneTheme();
     void setSolarizedLightTheme();
+=======
+    void onComponentDeleted(QStandardItem *item);        // 添加组件删除的处理函数
+    void onComponentMoved(QStandardItem *item, QStandardItem *newParent); // 添加组件移动的处理函数
+
+private:
+>>>>>>> 9bd960c (V0.1)
     void setupUI();
     void createActions();
     void createMenus();
@@ -57,12 +71,15 @@ private:
 
     ProjectManager *projectManager;
     ComponentManager *componentManager;
+<<<<<<< HEAD
     ThemeManager *themeManager;
     QMenu *themeMenu;
     QMenu *editMenu;  // Add this line to declare editMenu
     QAction *defaultThemeAction;
     QAction *atomOneThemeAction;
     QAction *solarizedLightThemeAction;
+=======
+>>>>>>> 9bd960c (V0.1)
 
     // Actions
     QAction *newProjectAction;
@@ -75,8 +92,14 @@ private:
     QAction *moveComponentAction;   // 添加移动组件的动作
     QAction *configureComponentAction;
     QAction *exitAction;
+<<<<<<< HEAD
     QAction *moveUpAction;
     QAction *moveDownAction;
 };
 
 #endif // MAINWINDOW_H
+=======
+};
+
+#endif // MAINWINDOW_H
+>>>>>>> 9bd960c (V0.1)

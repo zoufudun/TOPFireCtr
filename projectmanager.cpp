@@ -1,8 +1,11 @@
 #include "projectmanager.h"
+<<<<<<< HEAD
 #include <QtXml/QDomDocument>
 #include <QFile>
 #include <QTextStream>
 #include <QFileInfo>
+=======
+>>>>>>> 9bd960c (V0.1)
 
 ProjectManager::ProjectManager(QObject *parent)
     : QObject(parent), m_hasUnsavedChanges(false)
@@ -27,6 +30,7 @@ void ProjectManager::newProject()
     // Add initialization code for a new project
 }
 
+<<<<<<< HEAD
 // 在保存项目时
 void ProjectManager::saveProject(const QString &filePath)
 {
@@ -150,6 +154,20 @@ void ProjectManager::loadProject(const QString &filePath)
         }
         file.close();
     }
+=======
+void ProjectManager::loadProject(const QString &path)
+{
+    m_currentProjectPath = path;
+    m_hasUnsavedChanges = false;
+    // Add code to load project from file
+}
+
+void ProjectManager::saveProject(const QString &path)
+{
+    m_currentProjectPath = path;
+    m_hasUnsavedChanges = false;
+    // Add code to save project to file
+>>>>>>> 9bd960c (V0.1)
 }
 
 void ProjectManager::setUnsavedChanges(bool unsaved)
@@ -174,4 +192,8 @@ void ProjectManager::renameProject(const QString &newName)
         rootItem->setText(newName);
         m_hasUnsavedChanges = true;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 9bd960c (V0.1)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE RCC>
 <RCC version="1.0">
     <qresource prefix="/">
@@ -14,3 +15,10 @@
         <file>themes/solarized_light.qss</file>
     </qresource>
 </RCC>
+=======
+<RCC>
+    <qresource prefix="/components">
+        <file>default_components.xml</file>
+    </qresource>
+</RCC>
+>>>>>>> 9bd960c (V0.1)

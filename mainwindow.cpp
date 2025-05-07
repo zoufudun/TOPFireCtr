@@ -8,7 +8,10 @@
 #include <QStatusBar>
 #include <QInputDialog> // 添加此头文件
 #include <QMenu>        // 添加此头文件
+<<<<<<< HEAD
 #include "thememanager.h"
+=======
+>>>>>>> 9bd960c (V0.1)
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -17,18 +20,25 @@ MainWindow::MainWindow(QWidget *parent)
     componentManager = new ComponentManager(this);
     
     setupUI();
+<<<<<<< HEAD
     // 初始化主题管理器
     themeManager = new ThemeManager(this);
     
+=======
+>>>>>>> 9bd960c (V0.1)
     createActions();
     createMenus();
     createToolbars();
     createDockWindows();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9bd960c (V0.1)
     
     setWindowTitle(tr("Controller IDE"));
     setMinimumSize(800, 600);
     
+<<<<<<< HEAD
     // 连接组件管理器信号
     connect(componentManager, &ComponentManager::componentAdded, this, &MainWindow::onComponentAdded);
     connect(componentManager, &ComponentManager::componentDeleted, this, &MainWindow::onComponentDeleted);
@@ -39,6 +49,19 @@ MainWindow::MainWindow(QWidget *parent)
             this,
             &MainWindow::onComponentOrderChanged);
     connect(componentManager, &ComponentManager::componentConfigured, this, &MainWindow::onComponentConfigured);
+=======
+    // 连接组件添加信号
+    connect(componentManager, &ComponentManager::componentAdded, 
+            this, &MainWindow::onComponentAdded);
+    
+    // 连接组件删除信号
+    connect(componentManager, &ComponentManager::componentDeleted,
+            this, &MainWindow::onComponentDeleted);
+    
+    // 连接组件移动信号
+    connect(componentManager, &ComponentManager::componentMoved,
+            this, &MainWindow::onComponentMoved);
+>>>>>>> 9bd960c (V0.1)
 }
 
 MainWindow::~MainWindow()
@@ -82,6 +105,7 @@ void MainWindow::createActions()
     
     moveComponentAction = new QAction(tr("移动组件"), this);
     connect(moveComponentAction, &QAction::triggered, this, &MainWindow::moveComponent);
+<<<<<<< HEAD
     
     // 主题切换动作
     defaultThemeAction = new QAction(tr("默认主题"), this);
@@ -107,6 +131,8 @@ void MainWindow::createActions()
     connect(moveDownAction, &QAction::triggered, this, &MainWindow::moveComponentDown);
     
 
+=======
+>>>>>>> 9bd960c (V0.1)
 }
 
 void MainWindow::createMenus()
@@ -120,13 +146,17 @@ void MainWindow::createMenus()
     fileMenu->addSeparator();
     fileMenu->addAction(exitAction);
     
+<<<<<<< HEAD
 
     
+=======
+>>>>>>> 9bd960c (V0.1)
     QMenu *componentMenu = menuBar()->addMenu(tr("组件"));
     componentMenu->addAction(addComponentAction);
     componentMenu->addAction(deleteComponentAction); // 添加删除组件菜单项
     componentMenu->addAction(moveComponentAction);   // 添加移动组件菜单项
     componentMenu->addAction(configureComponentAction);
+<<<<<<< HEAD
     
     // 添加主题菜单
     themeMenu = menuBar()->addMenu(tr("主题"));
@@ -140,6 +170,8 @@ void MainWindow::createMenus()
     editMenu->addSeparator();
     editMenu->addAction(moveUpAction);
     editMenu->addAction(moveDownAction);
+=======
+>>>>>>> 9bd960c (V0.1)
 }
 
 void MainWindow::createToolbars()
@@ -163,12 +195,15 @@ void MainWindow::createDockWindows()
     projectDock = new QDockWidget(tr("项目"), this);
     projectDock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
     projectTreeView = new QTreeView(projectDock);
+<<<<<<< HEAD
     
     // 为项目树视图添加上下文菜单
     projectTreeView->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(projectTreeView, &QTreeView::customContextMenuRequested, 
             this, &MainWindow::showProjectContextMenu);
     
+=======
+>>>>>>> 9bd960c (V0.1)
     projectDock->setWidget(projectTreeView);
     addDockWidget(Qt::LeftDockWidgetArea, projectDock);
     
@@ -256,6 +291,7 @@ void MainWindow::addComponent()
 
 void MainWindow::configureComponent()
 {
+<<<<<<< HEAD
     // 获取当前选中的项目
     QModelIndex selectedIndex = projectTreeView->currentIndex();
     if (!selectedIndex.isValid()) {
@@ -272,6 +308,10 @@ void MainWindow::configureComponent()
     if (item) {
         componentManager->showConfigureComponentDialog(item);
     }
+=======
+    // 显示组件配置对话框
+    componentManager->showConfigureComponentDialog();
+>>>>>>> 9bd960c (V0.1)
 }
 
 // 添加组件处理函数
@@ -307,12 +347,15 @@ void MainWindow::onComponentAdded(const ComponentInfo &component)
         QStandardItem *rootItem = model->item(0);
         QStandardItem *item = new QStandardItem(component.name);
         item->setData(component.type, Qt::UserRole);
+<<<<<<< HEAD
         
         // 设置图标
         if (!component.iconPath.isEmpty()) {
             item->setIcon(QIcon(component.iconPath));
         }
         
+=======
+>>>>>>> 9bd960c (V0.1)
         rootItem->appendRow(item);
     } else if (component.level == 2) {
         // 第二层级 - 其他模块，需要添加到主机模块下
@@ -342,12 +385,15 @@ void MainWindow::onComponentAdded(const ComponentInfo &component)
         
         QStandardItem *item = new QStandardItem(component.name);
         item->setData(component.type, Qt::UserRole);
+<<<<<<< HEAD
         
         // 设置图标
         if (!component.iconPath.isEmpty()) {
             item->setIcon(QIcon(component.iconPath));
         }
         
+=======
+>>>>>>> 9bd960c (V0.1)
         hostItem->appendRow(item);
     }
     
@@ -400,11 +446,17 @@ void MainWindow::onComponentDeleted(QStandardItem *item)
     if (item) {
         QStandardItem *parentItem = item->parent();
         if (parentItem) {
+<<<<<<< HEAD
             // 从父项中移除该项
             parentItem->removeRow(item->row());
             
             projectManager->setUnsavedChanges(true);
             statusBar()->showMessage(tr("组件已删除"), 3000);
+=======
+            parentItem->removeRow(item->row());
+            projectManager->setUnsavedChanges(true);
+            statusBar()->showMessage(tr("组件已删除: %1").arg(item->text()), 3000);
+>>>>>>> 9bd960c (V0.1)
         }
     }
 }
@@ -414,6 +466,7 @@ void MainWindow::onComponentMoved(QStandardItem *item, QStandardItem *newParent)
     if (item && newParent) {
         QStandardItem *oldParent = item->parent();
         if (oldParent) {
+<<<<<<< HEAD
             // 保存项目文本，因为移除后 item 可能无效
             QString itemText = item->text();
             QVariant itemData = item->data(Qt::UserRole);
@@ -421,6 +474,11 @@ void MainWindow::onComponentMoved(QStandardItem *item, QStandardItem *newParent)
             // 创建一个新的项，复制原项的数据
             QStandardItem *newItem = new QStandardItem(itemText);
             newItem->setData(itemData, Qt::UserRole);
+=======
+            // 创建一个新的项，复制原项的数据
+            QStandardItem *newItem = new QStandardItem(item->text());
+            newItem->setData(item->data(Qt::UserRole), Qt::UserRole);
+>>>>>>> 9bd960c (V0.1)
             
             // 从原位置移除
             oldParent->removeRow(item->row());
@@ -429,6 +487,7 @@ void MainWindow::onComponentMoved(QStandardItem *item, QStandardItem *newParent)
             newParent->appendRow(newItem);
             
             projectManager->setUnsavedChanges(true);
+<<<<<<< HEAD
             statusBar()->showMessage(tr("组件已移动: %1").arg(itemText), 3000);
         }
     }
@@ -648,3 +707,9 @@ void MainWindow::onComponentConfigured(QStandardItem *item)
         statusBar()->showMessage(tr("组件已配置: %1").arg(itemText), 3000);
     }
 }
+=======
+            statusBar()->showMessage(tr("组件已移动: %1").arg(item->text()), 3000);
+        }
+    }
+}
+>>>>>>> 9bd960c (V0.1)

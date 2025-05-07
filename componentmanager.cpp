@@ -13,20 +13,26 @@
 #include <QTreeView>     // 添加此头文件
 #include <QStandardItem> // 添加此头文件
 
+<<<<<<< HEAD
 #include "dimoduleconfigdialog.h"  // 添加DI模块配置对话框头文件
 #include "domoduleconfigdialog.h"  // 添加DO模块配置对话框头文件
 
+=======
+>>>>>>> 9bd960c (V0.1)
 ComponentManager::ComponentManager(QObject *parent)
     : QObject(parent)
 {
     // 初始化组件类型列表
     initializeComponentTypes();
+<<<<<<< HEAD
     
     // 初始化DI模块
     m_diModule = new DIModule(this);
     
     // 初始化DO模块
     m_doModule = new DOModule(this);
+=======
+>>>>>>> 9bd960c (V0.1)
 }
 
 ComponentManager::~ComponentManager()
@@ -42,7 +48,10 @@ void ComponentManager::initializeComponentTypes()
     hostModule.type = "HostModule";
     hostModule.description = "控制器主机模块";
     hostModule.level = 1;
+<<<<<<< HEAD
     hostModule.iconPath = ":/icons/host.png";  // 设置图标路径
+=======
+>>>>>>> 9bd960c (V0.1)
     m_componentTypes.append(hostModule);
     
     // 第二层级 - 其他模块
@@ -50,6 +59,7 @@ void ComponentManager::initializeComponentTypes()
         "回路模块", "DI模块", "DO模块", "AI模块", "继电器模块", "通信模块"
     };
     
+<<<<<<< HEAD
     QStringList iconPaths = {
         ":/icons/loop.png", ":/icons/di.png", ":/icons/do.png", 
         ":/icons/ai.png", ":/icons/relay.png", ":/icons/comm.png"
@@ -63,6 +73,15 @@ void ComponentManager::initializeComponentTypes()
         module.description = QString("%1，连接到主机模块").arg(secondLevelModules[i]);
         module.level = 2;
         module.iconPath = i < iconPaths.size() ? iconPaths[i] : ":/icons/default.png";
+=======
+    for (const QString &moduleName : secondLevelModules) {
+        ComponentInfo module;
+        module.name = moduleName;
+        QString typeStr = moduleName;
+        module.type = typeStr.replace("模块", "Module");
+        module.description = QString("%1，连接到主机模块").arg(moduleName);
+        module.level = 2;
+>>>>>>> 9bd960c (V0.1)
         m_componentTypes.append(module);
     }
 }
@@ -70,7 +89,11 @@ void ComponentManager::initializeComponentTypes()
 void ComponentManager::showAddComponentDialog()
 {
     QDialog dialog;
+<<<<<<< HEAD
     dialog.setWindowTitle(tr("添加组件"));
+=======
+    dialog.setWindowTitle("添加组件");
+>>>>>>> 9bd960c (V0.1)
     dialog.setMinimumWidth(400);
     
     QVBoxLayout *layout = new QVBoxLayout(&dialog);
@@ -84,6 +107,7 @@ void ComponentManager::showAddComponentDialog()
         item->setToolTip(component.description);
         item->setData(Qt::UserRole, component.type);
         item->setData(Qt::UserRole + 1, component.level);
+<<<<<<< HEAD
         item->setData(Qt::UserRole + 2, component.iconPath);
         
         // 设置图标
@@ -91,6 +115,8 @@ void ComponentManager::showAddComponentDialog()
             item->setIcon(QIcon(component.iconPath));
         }
         
+=======
+>>>>>>> 9bd960c (V0.1)
         componentList->addItem(item);
     }
     layout->addWidget(componentList);
@@ -111,11 +137,14 @@ void ComponentManager::showAddComponentDialog()
         }
     });
     
+<<<<<<< HEAD
     // 添加双击处理
     connect(componentList, &QListWidget::itemDoubleClicked, [&dialog](QListWidgetItem *) {
         dialog.accept();
     });
     
+=======
+>>>>>>> 9bd960c (V0.1)
     QDialogButtonBox *buttonBox = new QDialogButtonBox(
         QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &dialog);
     layout->addWidget(buttonBox);
@@ -140,14 +169,20 @@ void ComponentManager::showAddComponentDialog()
             
             QString componentType = selectedItem->data(Qt::UserRole).toString();
             int componentLevel = selectedItem->data(Qt::UserRole + 1).toInt();
+<<<<<<< HEAD
             QString iconPath = selectedItem->data(Qt::UserRole + 2).toString();
+=======
+>>>>>>> 9bd960c (V0.1)
             
             // 创建组件信息并发送信号
             ComponentInfo component;
             component.name = componentName;
             component.type = componentType;
             component.level = componentLevel;
+<<<<<<< HEAD
             component.iconPath = iconPath;
+=======
+>>>>>>> 9bd960c (V0.1)
             
             // 查找完整的组件信息
             for (const ComponentInfo &info : m_componentTypes) {
@@ -162,6 +197,7 @@ void ComponentManager::showAddComponentDialog()
     }
 }
 
+<<<<<<< HEAD
 void ComponentManager::showConfigureComponentDialog(QStandardItem *item)
 {
     if (!item) {
@@ -275,6 +311,14 @@ void ComponentManager::showDOModuleConfigDialog(QStandardItem *item)
 //     }
 // }
 
+=======
+void ComponentManager::showConfigureComponentDialog()
+{
+    // 实现组件配置对话框
+    QMessageBox::information(nullptr, "配置组件", "组件配置功能将在后续版本中实现");
+}
+
+>>>>>>> 9bd960c (V0.1)
 void ComponentManager::showDeleteComponentDialog(QStandardItem *item)
 {
     if (!item) {
@@ -338,6 +382,7 @@ void ComponentManager::showMoveComponentDialog(QStandardItem *item)
     }
 }
 
+<<<<<<< HEAD
 void ComponentManager::moveComponentUp(QStandardItem *item)
 {
     if (!item) {
@@ -396,3 +441,9 @@ QList<ComponentInfo> ComponentManager::getComponentTypes() const
 {
     return m_componentTypes;
 }
+=======
+QList<ComponentInfo> ComponentManager::getComponentTypes() const
+{
+    return m_componentTypes;
+}
+>>>>>>> 9bd960c (V0.1)

@@ -26,7 +26,11 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_ComponentManager_t {
+<<<<<<< HEAD
     uint offsetsAndSizes[24];
+=======
+    uint offsetsAndSizes[20];
+>>>>>>> 9bd960c (V0.1)
     char stringdata0[17];
     char stringdata1[15];
     char stringdata2[1];
@@ -37,8 +41,11 @@ struct qt_meta_stringdata_ComponentManager_t {
     char stringdata7[5];
     char stringdata8[15];
     char stringdata9[10];
+<<<<<<< HEAD
     char stringdata10[22];
     char stringdata11[7];
+=======
+>>>>>>> 9bd960c (V0.1)
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_ComponentManager_t::offsetsAndSizes) + ofs), len 
@@ -53,9 +60,13 @@ Q_CONSTINIT static const qt_meta_stringdata_ComponentManager_t qt_meta_stringdat
         QT_MOC_LITERAL(74, 14),  // "QStandardItem*"
         QT_MOC_LITERAL(89, 4),  // "item"
         QT_MOC_LITERAL(94, 14),  // "componentMoved"
+<<<<<<< HEAD
         QT_MOC_LITERAL(109, 9),  // "newParent"
         QT_MOC_LITERAL(119, 21),  // "componentOrderChanged"
         QT_MOC_LITERAL(141, 6)   // "moveUp"
+=======
+        QT_MOC_LITERAL(109, 9)   // "newParent"
+>>>>>>> 9bd960c (V0.1)
     },
     "ComponentManager",
     "componentAdded",
@@ -66,9 +77,13 @@ Q_CONSTINIT static const qt_meta_stringdata_ComponentManager_t qt_meta_stringdat
     "QStandardItem*",
     "item",
     "componentMoved",
+<<<<<<< HEAD
     "newParent",
     "componentOrderChanged",
     "moveUp"
+=======
+    "newParent"
+>>>>>>> 9bd960c (V0.1)
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -79,11 +94,16 @@ Q_CONSTINIT static const uint qt_meta_data_ComponentManager[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
+<<<<<<< HEAD
        4,   14, // methods
+=======
+       3,   14, // methods
+>>>>>>> 9bd960c (V0.1)
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
+<<<<<<< HEAD
        4,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
@@ -91,12 +111,23 @@ Q_CONSTINIT static const uint qt_meta_data_ComponentManager[] = {
        5,    1,   41,    2, 0x06,    3 /* Public */,
        8,    2,   44,    2, 0x06,    5 /* Public */,
       10,    2,   49,    2, 0x06,    8 /* Public */,
+=======
+       3,       // signalCount
+
+ // signals: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    1,   32,    2, 0x06,    1 /* Public */,
+       5,    1,   35,    2, 0x06,    3 /* Public */,
+       8,    2,   38,    2, 0x06,    5 /* Public */,
+>>>>>>> 9bd960c (V0.1)
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
     QMetaType::Void, 0x80000000 | 6,    7,
     QMetaType::Void, 0x80000000 | 6, 0x80000000 | 6,    7,    9,
+<<<<<<< HEAD
     QMetaType::Void, 0x80000000 | 6, QMetaType::Bool,    7,   11,
+=======
+>>>>>>> 9bd960c (V0.1)
 
        0        // eod
 };
@@ -119,11 +150,15 @@ Q_CONSTINIT const QMetaObject ComponentManager::staticMetaObject = { {
         // method 'componentMoved'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QStandardItem *, std::false_type>,
+<<<<<<< HEAD
         QtPrivate::TypeAndForceComplete<QStandardItem *, std::false_type>,
         // method 'componentOrderChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QStandardItem *, std::false_type>,
         QtPrivate::TypeAndForceComplete<bool, std::false_type>
+=======
+        QtPrivate::TypeAndForceComplete<QStandardItem *, std::false_type>
+>>>>>>> 9bd960c (V0.1)
     >,
     nullptr
 } };
@@ -137,7 +172,10 @@ void ComponentManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         case 0: _t->componentAdded((*reinterpret_cast< std::add_pointer_t<ComponentInfo>>(_a[1]))); break;
         case 1: _t->componentDeleted((*reinterpret_cast< std::add_pointer_t<QStandardItem*>>(_a[1]))); break;
         case 2: _t->componentMoved((*reinterpret_cast< std::add_pointer_t<QStandardItem*>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QStandardItem*>>(_a[2]))); break;
+<<<<<<< HEAD
         case 3: _t->componentOrderChanged((*reinterpret_cast< std::add_pointer_t<QStandardItem*>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<bool>>(_a[2]))); break;
+=======
+>>>>>>> 9bd960c (V0.1)
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -163,6 +201,7 @@ void ComponentManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
                 return;
             }
         }
+<<<<<<< HEAD
         {
             using _t = void (ComponentManager::*)(QStandardItem * , bool );
             if (_t _q_method = &ComponentManager::componentOrderChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
@@ -170,6 +209,8 @@ void ComponentManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
                 return;
             }
         }
+=======
+>>>>>>> 9bd960c (V0.1)
     }
 }
 
@@ -192,6 +233,7 @@ int ComponentManager::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
+<<<<<<< HEAD
         if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
         _id -= 4;
@@ -199,6 +241,15 @@ int ComponentManager::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         if (_id < 4)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
         _id -= 4;
+=======
+        if (_id < 3)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 3;
+    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 3)
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
+        _id -= 3;
+>>>>>>> 9bd960c (V0.1)
     }
     return _id;
 }
@@ -223,6 +274,7 @@ void ComponentManager::componentMoved(QStandardItem * _t1, QStandardItem * _t2)
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
     QMetaObject::activate(this, &staticMetaObject, 2, _a);
 }
+<<<<<<< HEAD
 
 // SIGNAL 3
 void ComponentManager::componentOrderChanged(QStandardItem * _t1, bool _t2)
@@ -230,5 +282,7 @@ void ComponentManager::componentOrderChanged(QStandardItem * _t1, bool _t2)
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
     QMetaObject::activate(this, &staticMetaObject, 3, _a);
 }
+=======
+>>>>>>> 9bd960c (V0.1)
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE
