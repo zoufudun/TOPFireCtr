@@ -196,14 +196,20 @@ void MainWindow::createDockWindows()
     projectDock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
     projectTreeView = new QTreeView(projectDock);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b22ee86 (组件列表中添加组件删除等功能)
     
     // 为项目树视图添加上下文菜单
     projectTreeView->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(projectTreeView, &QTreeView::customContextMenuRequested, 
             this, &MainWindow::showProjectContextMenu);
     
+<<<<<<< HEAD
 =======
 >>>>>>> 9bd960c (V0.1)
+=======
+>>>>>>> b22ee86 (组件列表中添加组件删除等功能)
     projectDock->setWidget(projectTreeView);
     addDockWidget(Qt::LeftDockWidgetArea, projectDock);
     
@@ -447,16 +453,25 @@ void MainWindow::onComponentDeleted(QStandardItem *item)
         QStandardItem *parentItem = item->parent();
         if (parentItem) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             // 从父项中移除该项
             parentItem->removeRow(item->row());
             
             projectManager->setUnsavedChanges(true);
             statusBar()->showMessage(tr("组件已删除"), 3000);
 =======
+=======
+            // 从父项中移除该项
+>>>>>>> b22ee86 (组件列表中添加组件删除等功能)
             parentItem->removeRow(item->row());
+            
             projectManager->setUnsavedChanges(true);
+<<<<<<< HEAD
             statusBar()->showMessage(tr("组件已删除: %1").arg(item->text()), 3000);
 >>>>>>> 9bd960c (V0.1)
+=======
+            statusBar()->showMessage(tr("组件已删除"), 3000);
+>>>>>>> b22ee86 (组件列表中添加组件删除等功能)
         }
     }
 }
@@ -712,4 +727,64 @@ void MainWindow::onComponentConfigured(QStandardItem *item)
         }
     }
 }
+<<<<<<< HEAD
 >>>>>>> 9bd960c (V0.1)
+=======
+
+void MainWindow::showProjectContextMenu(const QPoint &pos)
+{
+    QModelIndex index = projectTreeView->indexAt(pos);
+    if (index.isValid()) {
+        QMenu contextMenu(this);
+        
+        // 如果是根节点，添加重命名项目选项
+        if (!index.parent().isValid()) {
+            QAction *renameAction = new QAction(tr("重命名项目"), this);
+            connect(renameAction, &QAction::triggered, this, &MainWindow::renameProject);
+            contextMenu.addAction(renameAction);
+            contextMenu.addSeparator();
+        }
+        
+        // 添加组件选项
+        QAction *addAction = new QAction(tr("添加组件"), this);
+        connect(addAction, &QAction::triggered, this, &MainWindow::addComponent);
+        contextMenu.addAction(addAction);
+        
+        // 如果不是根节点，添加组件配置和删除选项
+        if (index.parent().isValid()) {
+            QAction *configureAction = new QAction(tr("配置组件"), this);
+            connect(configureAction, &QAction::triggered, this, [this]() {
+                QModelIndex currentIndex = projectTreeView->currentIndex();
+                if (currentIndex.isValid()) {
+                    QStandardItem *item = projectManager->projectModel()->itemFromIndex(currentIndex);
+                    componentManager->showConfigureComponentDialog();
+                }
+            });
+            contextMenu.addAction(configureAction);
+            
+            QAction *deleteAction = new QAction(tr("删除组件"), this);
+            connect(deleteAction, &QAction::triggered, this, [this]() {
+                QModelIndex currentIndex = projectTreeView->currentIndex();
+                if (currentIndex.isValid()) {
+                    QStandardItem *item = projectManager->projectModel()->itemFromIndex(currentIndex);
+                    componentManager->showDeleteComponentDialog(item);
+                }
+            });
+            contextMenu.addAction(deleteAction);
+            
+            QAction *moveAction = new QAction(tr("移动组件"), this);
+            connect(moveAction, &QAction::triggered, this, [this]() {
+                QModelIndex currentIndex = projectTreeView->currentIndex();
+                if (currentIndex.isValid()) {
+                    QStandardItem *item = projectManager->projectModel()->itemFromIndex(currentIndex);
+                    componentManager->showMoveComponentDialog(item);
+                }
+            });
+            contextMenu.addAction(moveAction);
+        }
+        
+        // 显示上下文菜单
+        contextMenu.exec(projectTreeView->viewport()->mapToGlobal(pos));
+    }
+}
+>>>>>>> b22ee86 (组件列表中添加组件删除等功能)

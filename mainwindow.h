@@ -38,6 +38,7 @@ private slots:
     void configureComponent();
     void onComponentAdded(const ComponentInfo &component);
 <<<<<<< HEAD
+<<<<<<< HEAD
     void onComponentDeleted(QStandardItem *item);
     void onComponentMoved(QStandardItem *item, QStandardItem *newParent);
     void onComponentConfigured(QStandardItem *item);
@@ -55,6 +56,11 @@ private:
 =======
     void onComponentDeleted(QStandardItem *item);        // 添加组件删除的处理函数
     void onComponentMoved(QStandardItem *item, QStandardItem *newParent); // 添加组件移动的处理函数
+=======
+    void onComponentDeleted(QStandardItem *item);
+    void onComponentMoved(QStandardItem *item, QStandardItem *newParent);
+    void showProjectContextMenu(const QPoint &pos);
+>>>>>>> b22ee86 (组件列表中添加组件删除等功能)
 
 private:
 >>>>>>> 9bd960c (V0.1)
