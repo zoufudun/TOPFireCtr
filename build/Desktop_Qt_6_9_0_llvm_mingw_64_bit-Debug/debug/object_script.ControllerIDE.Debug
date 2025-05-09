@@ -2,10 +2,15 @@ debug/componentmanager.o
 debug/dimodule.o
 debug/dimoduleconfigdialog.o
 <<<<<<< HEAD
+<<<<<<< HEAD
 debug/domodule.o
 debug/domoduleconfigdialog.o
 =======
 >>>>>>> c7c6830 (增加DI模块配置界面)
+=======
+debug/domodule.o
+debug/domoduleconfigdialog.o
+>>>>>>> b4ce964 (增加DO模块配置界面)
 debug/main.o
 debug/mainwindow.o
 debug/projectmanager.o
@@ -15,10 +20,15 @@ debug/moc_componentmanager.o
 debug/moc_dimodule.o
 debug/moc_dimoduleconfigdialog.o
 <<<<<<< HEAD
+<<<<<<< HEAD
 debug/moc_domodule.o
 debug/moc_domoduleconfigdialog.o
 =======
 >>>>>>> c7c6830 (增加DI模块配置界面)
+=======
+debug/moc_domodule.o
+debug/moc_domoduleconfigdialog.o
+>>>>>>> b4ce964 (增加DO模块配置界面)
 debug/moc_mainwindow.o
 debug/moc_projectmanager.o
 debug/moc_thememanager.o

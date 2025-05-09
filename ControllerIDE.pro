@@ -23,6 +23,7 @@ SOURCES += \
     dimoduleconfigdialog.cpp \
     domodule.cpp \
     domoduleconfigdialog.cpp \
+<<<<<<< HEAD
     main.cpp \
     mainwindow.cpp \
     projectmanager.cpp \
@@ -43,6 +44,8 @@ HEADERS += \
     dimodule.cpp \
     dimoduleconfigdialog.cpp \
 >>>>>>> c7c6830 (增加DI模块配置界面)
+=======
+>>>>>>> b4ce964 (增加DO模块配置界面)
     main.cpp \
     mainwindow.cpp \
     projectmanager.cpp \
@@ -52,6 +55,8 @@ HEADERS += \
     componentmanager.h \
     dimodule.h \
     dimoduleconfigdialog.h \
+    domodule.h \
+    domoduleconfigdialog.h \
     mainwindow.h \
     projectmanager.h \
 <<<<<<< HEAD
