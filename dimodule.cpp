@@ -87,9 +87,13 @@ void DIModule::saveConfiguration(const QString &filePath)
             bitObj["description"] = m_channels[i].bits[j].description;
             bitObj["isGlobal"] = m_channels[i].bits[j].isGlobal;
 <<<<<<< HEAD
+<<<<<<< HEAD
             bitObj["value"] = m_channels[i].bits[j].value;  // 保存位值
 =======
 >>>>>>> c7c6830 (增加DI模块配置界面)
+=======
+            bitObj["value"] = m_channels[i].bits[j].value;  // 保存位值
+>>>>>>> a2577e0 (DI模块配置界面增加值列)
             bitsArray.append(bitObj);
         }
         
@@ -150,9 +154,13 @@ void DIModule::loadConfiguration(const QString &filePath)
                     variable.description = bitObj["description"].toString();
                     variable.isGlobal = bitObj["isGlobal"].toBool();
 <<<<<<< HEAD
+<<<<<<< HEAD
                     variable.value = bitObj.contains("value") ? bitObj["value"].toInt() : 0;  // 读取位值，如果不存在则默认为0
 =======
 >>>>>>> c7c6830 (增加DI模块配置界面)
+=======
+                    variable.value = bitObj.contains("value") ? bitObj["value"].toInt() : 0;  // 读取位值，如果不存在则默认为0
+>>>>>>> a2577e0 (DI模块配置界面增加值列)
                     
                     setBitVariable(channelNumber, j, variable);
                 }
