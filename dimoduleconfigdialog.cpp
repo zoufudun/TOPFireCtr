@@ -60,15 +60,22 @@ void DIModuleConfigDialog::setupUI()
     
     mainLayout->addLayout(channelCountLayout);
     
+<<<<<<< HEAD
     // 位变量表格 - 添加值列
     m_bitTable = new QTableWidget(8, 4, this);
     m_bitTable->setHorizontalHeaderLabels(QStringList() << "位" << "变量名" << "值" << "描述");
+=======
+    // 位变量表格
+    m_bitTable = new QTableWidget(8, 3, this);
+    m_bitTable->setHorizontalHeaderLabels(QStringList() << "位" << "变量名" << "描述");
+>>>>>>> c7c6830 (增加DI模块配置界面)
     m_bitTable->verticalHeader()->setVisible(false);
     
     // 设置表格列可以拖动调整大小
     m_bitTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Interactive);
     m_bitTable->horizontalHeader()->setStretchLastSection(true);
     
+<<<<<<< HEAD
     // 允许通过拖拽调整列的顺序
     m_bitTable->horizontalHeader()->setSectionsMovable(true);
     
@@ -84,6 +91,14 @@ void DIModuleConfigDialog::setupUI()
     hintLabel->setStyleSheet("color: gray; font-style: italic;");
     mainLayout->addWidget(hintLabel);
     
+=======
+    // 设置默认列宽
+    m_bitTable->setColumnWidth(0, 50);  // 位列宽度较小
+    m_bitTable->setColumnWidth(1, 200); // 变量名列宽度适中
+    
+    mainLayout->addWidget(m_bitTable);
+    
+>>>>>>> c7c6830 (增加DI模块配置界面)
     // 按钮
     QHBoxLayout *buttonLayout = new QHBoxLayout();
     m_saveButton = new QPushButton("保存", this);
@@ -103,6 +118,7 @@ void DIModuleConfigDialog::setupUI()
     connect(m_saveButton, &QPushButton::clicked, this, &DIModuleConfigDialog::saveConfiguration);
     connect(m_cancelButton, &QPushButton::clicked, this, &DIModuleConfigDialog::reject);
     connect(m_bitTable, &QTableWidget::cellChanged, this, &DIModuleConfigDialog::onBitVariableChanged);
+<<<<<<< HEAD
     
     // 连接列顺序变化信号
     connect(m_bitTable->horizontalHeader(), &QHeaderView::sectionMoved,
@@ -110,6 +126,8 @@ void DIModuleConfigDialog::setupUI()
         // 可以在这里添加列顺序变化的处理逻辑
         // 例如，保存当前的列顺序到配置中
     });
+=======
+>>>>>>> c7c6830 (增加DI模块配置界面)
 }
 
 void DIModuleConfigDialog::updateBitTable(int channelIndex)
@@ -126,12 +144,15 @@ void DIModuleConfigDialog::updateBitTable(int channelIndex)
         return;
     }
     
+<<<<<<< HEAD
     // 保存当前的列顺序
     QList<int> columnOrder;
     for (int i = 0; i < m_bitTable->columnCount(); ++i) {
         columnOrder.append(m_bitTable->horizontalHeader()->visualIndex(i));
     }
     
+=======
+>>>>>>> c7c6830 (增加DI模块配置界面)
     // 更新表格数据
     for (int j = 0; j < 8; ++j) {
         // 位编号
@@ -151,6 +172,7 @@ void DIModuleConfigDialog::updateBitTable(int channelIndex)
             nameItem->setText(channel->bits[j].name);
         }
         
+<<<<<<< HEAD
         // 值 - 添加下拉框
         QComboBox *valueCombo = qobject_cast<QComboBox*>(m_bitTable->cellWidget(j, 2));
         if (!valueCombo) {
@@ -177,11 +199,19 @@ void DIModuleConfigDialog::updateBitTable(int channelIndex)
         if (!descItem) {
             descItem = new QTableWidgetItem(channel->bits[j].description);
             m_bitTable->setItem(j, 3, descItem);
+=======
+        // 描述
+        QTableWidgetItem *descItem = m_bitTable->item(j, 2);
+        if (!descItem) {
+            descItem = new QTableWidgetItem(channel->bits[j].description);
+            m_bitTable->setItem(j, 2, descItem);
+>>>>>>> c7c6830 (增加DI模块配置界面)
         } else {
             descItem->setText(channel->bits[j].description);
         }
     }
     
+<<<<<<< HEAD
     // 恢复列顺序
     for (int i = 0; i < columnOrder.size(); ++i) {
         int visualIndex = m_bitTable->horizontalHeader()->visualIndex(i);
@@ -190,10 +220,13 @@ void DIModuleConfigDialog::updateBitTable(int channelIndex)
         }
     }
     
+=======
+>>>>>>> c7c6830 (增加DI模块配置界面)
     // 重新连接信号
     connect(m_bitTable, &QTableWidget::cellChanged, this, &DIModuleConfigDialog::onBitVariableChanged);
 }
 
+<<<<<<< HEAD
 void DIModuleConfigDialog::onBitVariableChanged(int row, int column)
 {
     // 获取逻辑列索引对应的实际数据列
@@ -223,6 +256,8 @@ void DIModuleConfigDialog::onBitVariableChanged(int row, int column)
     m_module->setBitVariable(m_currentChannelIndex, row, variable);
 }
 
+=======
+>>>>>>> c7c6830 (增加DI模块配置界面)
 void DIModuleConfigDialog::onChannelCountChanged(int index)
 {
     // 获取新的通道数量
@@ -251,6 +286,29 @@ void DIModuleConfigDialog::onChannelSelectionChanged(int index)
     updateBitTable(m_currentChannelIndex);
 }
 
+<<<<<<< HEAD
+=======
+void DIModuleConfigDialog::onBitVariableChanged(int row, int column)
+{
+    // 只处理变量名和描述列
+    if (column != 1 && column != 2) {
+        return;
+    }
+    
+    // 获取变量名和描述
+    QString name = m_bitTable->item(row, 1) ? m_bitTable->item(row, 1)->text() : "";
+    QString description = m_bitTable->item(row, 2) ? m_bitTable->item(row, 2)->text() : "";
+    
+    // 更新模块数据
+    DIBitVariable variable;
+    variable.name = name;
+    variable.description = description;
+    variable.isGlobal = true;  // 默认设置为全局变量
+    
+    m_module->setBitVariable(m_currentChannelIndex, row, variable);
+}
+
+>>>>>>> c7c6830 (增加DI模块配置界面)
 void DIModuleConfigDialog::saveConfiguration()
 {
     // 这里可以添加保存配置的逻辑

@@ -11,9 +11,12 @@ struct DIBitVariable {
     QString name;       // 变量名称
     QString description; // 变量描述
     bool isGlobal;      // 是否为全局变量
+<<<<<<< HEAD
     int value;          // 位的值，0或1
     
     DIBitVariable() : isGlobal(true), value(0) {}  // 默认构造函数，初始化值为0
+=======
+>>>>>>> c7c6830 (增加DI模块配置界面)
 };
 
 // 定义DI模块的通道结构

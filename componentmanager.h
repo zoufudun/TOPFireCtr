@@ -26,6 +26,7 @@
 
 #include <QObject>
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include <QString>
 #include <QList>
 #include <QStandardItem>
@@ -52,11 +53,16 @@ struct ComponentInfo {
     QString description;
 =======
 #include <QList>
+=======
+>>>>>>> c7c6830 (增加DI模块配置界面)
 #include <QString>
+#include <QList>
 #include <QStandardItem>
+#include "dimodule.h"  // 添加DI模块头文件
 
 // 组件信息结构体
 struct ComponentInfo {
+<<<<<<< HEAD
     QString name;        // 组件名称
     QString type;        // 组件类型
     QString description; // 组件描述
@@ -66,6 +72,13 @@ struct ComponentInfo {
 =======
     QString iconPath;    // 组件图标路径
 >>>>>>> d0afa2c (组件实现双击添加)
+=======
+    QString name;
+    QString type;
+    QString description;
+    int level;
+    QString iconPath;
+>>>>>>> c7c6830 (增加DI模块配置界面)
 };
 
 class ComponentManager : public QObject
@@ -76,8 +89,8 @@ public:
     explicit ComponentManager(QObject *parent = nullptr);
     ~ComponentManager();
 
-    // 显示添加组件对话框
     void showAddComponentDialog();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     void showConfigureComponentDialog(QStandardItem *item = nullptr);
@@ -101,20 +114,24 @@ public:
     void showConfigureComponentDialog();
     
     // 显示删除组件对话框
+=======
+    void showConfigureComponentDialog(QStandardItem *item = nullptr);
+>>>>>>> c7c6830 (增加DI模块配置界面)
     void showDeleteComponentDialog(QStandardItem *item);
-    
-    // 显示移动组件对话框
     void showMoveComponentDialog(QStandardItem *item);
-    
-    // 移动组件顺序
     void moveComponentUp(QStandardItem *item);
     void moveComponentDown(QStandardItem *item);
+<<<<<<< HEAD
 >>>>>>> 5b065cd (增加了上下移动组件的功能)
+=======
+    // 添加DI模块配置对话框
+    void showDIModuleConfigDialog(QStandardItem *item);
+>>>>>>> c7c6830 (增加DI模块配置界面)
     QList<ComponentInfo> getComponentTypes() const;
 
 signals:
-    // 组件添加信号
     void componentAdded(const ComponentInfo &component);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     void componentDeleted(QStandardItem *item);
@@ -129,17 +146,15 @@ signals:
 =======
     
     // 组件删除信号
+=======
+>>>>>>> c7c6830 (增加DI模块配置界面)
     void componentDeleted(QStandardItem *item);
-    
-    // 组件移动信号
     void componentMoved(QStandardItem *item, QStandardItem *newParent);
-    
-    // 组件顺序变更信号
     void componentOrderChanged(QStandardItem *item, bool moveUp);
 >>>>>>> 5b065cd (增加了上下移动组件的功能)
 
 private:
-    // 组件类型列表
+    void initializeComponentTypes();
     QList<ComponentInfo> m_componentTypes;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -153,9 +168,14 @@ private:
 >>>>>>> 9bd960c (V0.1)
 =======
     
+<<<<<<< HEAD
     // 初始化组件类型
     void initializeComponentTypes();
 >>>>>>> 5b065cd (增加了上下移动组件的功能)
+=======
+    // 添加DI模块实例
+    DIModule *m_diModule;
+>>>>>>> c7c6830 (增加DI模块配置界面)
 };
 
 #endif // COMPONENTMANAGER_H

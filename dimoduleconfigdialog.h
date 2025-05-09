@@ -29,11 +29,22 @@ private:
     
     DIModule *m_module;
     QComboBox *m_channelCountCombo;
+<<<<<<< HEAD
     QComboBox *m_channelSelectCombo;  // 通道选择下拉框
     QTableWidget *m_bitTable;         // 使用单个表格替代多个选项卡
     QPushButton *m_saveButton;
     QPushButton *m_cancelButton;
     int m_currentChannelIndex;        // 当前选中的通道索引
+=======
+    QComboBox *m_channelSelectCombo;
+    //QTabWidget *m_channelTabs;
+    QTableWidget *m_bitTable;
+    //QVector<QTableWidget*> m_bitTables;
+    
+    QPushButton *m_saveButton;
+    QPushButton *m_cancelButton;
+    int m_currentChannelIndex; // 通道数量
+>>>>>>> c7c6830 (增加DI模块配置界面)
 };
 
 #endif // DIMODULECONFIGDIALOG_H

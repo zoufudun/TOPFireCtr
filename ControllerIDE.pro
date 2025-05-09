@@ -1,4 +1,4 @@
-QT       += core gui xml
+QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,6 +16,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+<<<<<<< HEAD
 <<<<<<< HEAD
     componentmanager.cpp \
     dimodule.cpp \
@@ -37,14 +38,20 @@ HEADERS += \
     projectmanager.h \
     thememanager.h
 =======
+=======
+    componentmanager.cpp \
+    dimodule.cpp \
+    dimoduleconfigdialog.cpp \
+>>>>>>> c7c6830 (增加DI模块配置界面)
     main.cpp \
     mainwindow.cpp \
     projectmanager.cpp \
-    componentmanager.cpp \
     thememanager.cpp
 
 HEADERS += \
     componentmanager.h \
+    dimodule.h \
+    dimoduleconfigdialog.h \
     mainwindow.h \
     projectmanager.h \
 <<<<<<< HEAD
@@ -62,12 +69,17 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 RESOURCES += \
 <<<<<<< HEAD
     resources.qrc
 =======
 RESOURCES += resources.qrc
 >>>>>>> 5b065cd (增加了上下移动组件的功能)
+=======
+RESOURCES += \
+    resources.qrc
+>>>>>>> c7c6830 (增加DI模块配置界面)
 
 OTHER_FILES += \
     themes/default.qss \

@@ -14,16 +14,22 @@
 #include <QStandardItem> // 添加此头文件
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "dimoduleconfigdialog.h"  // 添加DI模块配置对话框头文件
 #include "domoduleconfigdialog.h"  // 添加DO模块配置对话框头文件
 
 =======
 >>>>>>> 9bd960c (V0.1)
+=======
+#include "dimoduleconfigdialog.h"  // 添加DI模块配置对话框头文件
+
+>>>>>>> c7c6830 (增加DI模块配置界面)
 ComponentManager::ComponentManager(QObject *parent)
     : QObject(parent)
 {
     // 初始化组件类型列表
     initializeComponentTypes();
+<<<<<<< HEAD
 <<<<<<< HEAD
     
     // 初始化DI模块
@@ -33,6 +39,11 @@ ComponentManager::ComponentManager(QObject *parent)
     m_doModule = new DOModule(this);
 =======
 >>>>>>> 9bd960c (V0.1)
+=======
+    
+    // 初始化DI模块
+    m_diModule = new DIModule(this);
+>>>>>>> c7c6830 (增加DI模块配置界面)
 }
 
 ComponentManager::~ComponentManager()
@@ -232,6 +243,7 @@ void ComponentManager::showAddComponentDialog()
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 void ComponentManager::showConfigureComponentDialog(QStandardItem *item)
 {
     if (!item) {
@@ -347,9 +359,38 @@ void ComponentManager::showDOModuleConfigDialog(QStandardItem *item)
 
 =======
 void ComponentManager::showConfigureComponentDialog()
+=======
+void ComponentManager::showConfigureComponentDialog(QStandardItem *item)
+>>>>>>> c7c6830 (增加DI模块配置界面)
 {
-    // 实现组件配置对话框
-    QMessageBox::information(nullptr, "配置组件", "组件配置功能将在后续版本中实现");
+    if (!item) {
+        return;
+    }
+    
+    // 根据组件类型显示不同的配置对话框
+    QString componentType = item->data(Qt::UserRole).toString();
+    
+    if (componentType == "DIModule") {
+        showDIModuleConfigDialog(item);
+    } else {
+        // 其他类型的组件配置
+        QMessageBox::information(nullptr, "配置组件", "组件配置功能将在后续版本中实现");
+    }
+}
+
+void ComponentManager::showDIModuleConfigDialog(QStandardItem *item)
+{
+    if (!item) {
+        return;
+    }
+    
+    // 创建DI模块配置对话框
+    DIModuleConfigDialog dialog(m_diModule);
+    
+    if (dialog.exec() == QDialog::Accepted) {
+        // 配置已保存，可以在这里更新项目树中的组件信息
+        // 例如，更新组件名称或图标等
+    }
 }
 
 >>>>>>> 9bd960c (V0.1)
@@ -478,9 +519,12 @@ QList<ComponentInfo> ComponentManager::getComponentTypes() const
 {
     return m_componentTypes;
 }
+<<<<<<< HEAD
 =======
 QList<ComponentInfo> ComponentManager::getComponentTypes() const
 {
     return m_componentTypes;
 }
 >>>>>>> 9bd960c (V0.1)
+=======
+>>>>>>> c7c6830 (增加DI模块配置界面)

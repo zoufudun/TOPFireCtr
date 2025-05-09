@@ -336,6 +336,9 @@ void MainWindow::addComponent()
 void MainWindow::configureComponent()
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c7c6830 (增加DI模块配置界面)
     // 获取当前选中的项目
     QModelIndex selectedIndex = projectTreeView->currentIndex();
     if (!selectedIndex.isValid()) {
@@ -352,10 +355,13 @@ void MainWindow::configureComponent()
     if (item) {
         componentManager->showConfigureComponentDialog(item);
     }
+<<<<<<< HEAD
 =======
     // 显示组件配置对话框
     componentManager->showConfigureComponentDialog();
 >>>>>>> 9bd960c (V0.1)
+=======
+>>>>>>> c7c6830 (增加DI模块配置界面)
 }
 
 // 添加组件处理函数
