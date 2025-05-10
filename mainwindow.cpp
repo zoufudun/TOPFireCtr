@@ -33,7 +33,12 @@ MainWindow::MainWindow(QWidget *parent)
     connect(componentManager, &ComponentManager::componentAdded, this, &MainWindow::onComponentAdded);
     connect(componentManager, &ComponentManager::componentDeleted, this, &MainWindow::onComponentDeleted);
     connect(componentManager, &ComponentManager::componentMoved, this, &MainWindow::onComponentMoved);
-    connect(componentManager, &ComponentManager::componentOrderChanged, this, &MainWindow::onComponentOrderChanged);
+    // 使用函数指针明确指定信号类型
+    connect(componentManager,
+            static_cast<void (ComponentManager::*)(QStandardItem*, int, int)>(&ComponentManager::componentOrderChanged),
+            this,
+            &MainWindow::onComponentOrderChanged);
+    connect(componentManager, &ComponentManager::componentConfigured, this, &MainWindow::onComponentConfigured);
 }
 
 MainWindow::~MainWindow()
@@ -540,16 +545,37 @@ void MainWindow::changeTheme()
 }
 
 
-void MainWindow::onComponentOrderChanged(QStandardItem *item, bool moveUp)
+// void MainWindow::onComponentOrderChanged(QStandardItem *item, bool moveUp)
+// {
+//     if (item) {
+//         // 选中移动后的项
+//         QModelIndex index = item->index();
+//         projectTreeView->setCurrentIndex(index);
+        
+//         // 标记项目有未保存的更改
+//         projectManager->setUnsavedChanges(true);
+        
+//         QString direction = moveUp ? "上移" : "下移";
+//         statusBar()->showMessage(tr("组件已%1: %2").arg(direction).arg(item->text()), 3000);
+//     }
+// }
+
+// 修改 onComponentOrderChanged 方法的签名
+void MainWindow::onComponentOrderChanged(QStandardItem *parent, int oldIndex, int newIndex)
 {
+    // 确定是上移还是下移
+    bool moveUp = (oldIndex > newIndex);
+    // 获取移动的项
+    QStandardItem *item = parent->child(newIndex);
+
     if (item) {
         // 选中移动后的项
         QModelIndex index = item->index();
         projectTreeView->setCurrentIndex(index);
-        
+
         // 标记项目有未保存的更改
         projectManager->setUnsavedChanges(true);
-        
+
         QString direction = moveUp ? "上移" : "下移";
         statusBar()->showMessage(tr("组件已%1: %2").arg(direction).arg(item->text()), 3000);
     }
@@ -577,3 +603,48 @@ void MainWindow::moveComponentDown()
     }
 }
 
+void MainWindow::updatePropertiesView(QStandardItem *item)
+{
+    QTreeWidget *propertiesTree = qobject_cast<QTreeWidget*>(propertiesDock->widget());
+    propertiesTree->clear();
+    
+    if (item) {
+        // 添加名称属性
+        QTreeWidgetItem *nameItem = new QTreeWidgetItem(propertiesTree);
+        nameItem->setText(0, tr("名称"));
+        nameItem->setText(1, item->text());
+        
+        // 添加类型属性
+        QTreeWidgetItem *typeItem = new QTreeWidgetItem(propertiesTree);
+        typeItem->setText(0, tr("类型"));
+        typeItem->setText(1, item->data(Qt::UserRole).toString());
+        
+        // 如果是DI模块，添加通信方式属性
+        if (item->data(Qt::UserRole).toString() == "DIModule") {
+            QTreeWidgetItem *commItem = new QTreeWidgetItem(propertiesTree);
+            commItem->setText(0, tr("通信方式"));
+            
+            int commType = item->data(Qt::UserRole + 1).toInt();
+            QString commText;
+            switch (commType) {
+                case TCP: commText = "TCP"; break;
+                case UDP: commText = "UDP"; break;
+                case CAN: commText = "CAN"; break;
+                case MODBUS_485: commText = "MODBUS 485"; break;
+                case ETHERCAT: commText = "ETHERCAT"; break;
+                default: commText = tr("未知"); break;
+            }
+            
+            commItem->setText(1, commText);
+        }
+    }
+}
+    // ... existing code ...
+void MainWindow::onComponentConfigured(QStandardItem *item)
+{
+    if (item) {
+        QString itemText = item->text();
+        projectManager->setUnsavedChanges(true);
+        statusBar()->showMessage(tr("组件已配置: %1").arg(itemText), 3000);
+    }
+}

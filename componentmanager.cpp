@@ -70,7 +70,7 @@ void ComponentManager::initializeComponentTypes()
 void ComponentManager::showAddComponentDialog()
 {
     QDialog dialog;
-    dialog.setWindowTitle("添加组件");
+    dialog.setWindowTitle(tr("添加组件"));
     dialog.setMinimumWidth(400);
     
     QVBoxLayout *layout = new QVBoxLayout(&dialog);
@@ -198,18 +198,82 @@ void ComponentManager::showDIModuleConfigDialog(QStandardItem *item)
 
 void ComponentManager::showDOModuleConfigDialog(QStandardItem *item)
 {
-    if (!item) {
-        return;
+    QDialog dialog;
+    dialog.setWindowTitle(tr("配置组件"));
+    
+    QVBoxLayout *layout = new QVBoxLayout(&dialog);
+    
+    // 组件名称
+    QHBoxLayout *nameLayout = new QHBoxLayout();
+    QLabel *nameLabel = new QLabel(tr("名称:"), &dialog);
+    QLineEdit *nameEdit = new QLineEdit(&dialog);
+    nameEdit->setText(item ? item->text() : "");
+    nameLayout->addWidget(nameLabel);
+    nameLayout->addWidget(nameEdit);
+    layout->addLayout(nameLayout);
+    
+    // 通信方式选择
+    QHBoxLayout *commLayout = new QHBoxLayout();
+    QLabel *commLabel = new QLabel(tr("通信方式:"), &dialog);
+    QComboBox *commComboBox = new QComboBox(&dialog);
+    
+    // 添加通信方式选项
+    commComboBox->addItem("TCP", TCP);
+    commComboBox->addItem("UDP", UDP);
+    commComboBox->addItem("CAN", CAN);
+    commComboBox->addItem("MODBUS 485", MODBUS_485);
+    commComboBox->addItem("ETHERCAT", ETHERCAT);
+    
+    // 如果是编辑现有组件，设置当前通信方式
+    if (item) {
+        QVariant commData = item->data(Qt::UserRole + 1); // 假设通信方式存储在UserRole+1
+        if (commData.isValid()) {
+            commComboBox->setCurrentIndex(commData.toInt());
+        }
     }
     
-    // 创建DO模块配置对话框
-    DOModuleConfigDialog dialog(m_doModule);
+    commLayout->addWidget(commLabel);
+    commLayout->addWidget(commComboBox);
+    layout->addLayout(commLayout);
+    
+    // 按钮
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(
+        QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &dialog);
+    connect(buttonBox, &QDialogButtonBox::accepted, &dialog, &QDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
+    layout->addWidget(buttonBox);
     
     if (dialog.exec() == QDialog::Accepted) {
-        // 配置已保存，可以在这里更新项目树中的组件信息
-        // 例如，更新组件名称或图标等
+        QString name = nameEdit->text();
+        if (!name.isEmpty()) {
+            if (item) {
+                // 更新组件名称
+                item->setText(name);
+                
+                // 更新通信方式
+                int commIndex = commComboBox->currentIndex();
+                item->setData(commIndex, Qt::UserRole + 1);
+                
+                emit componentConfigured(item);
+            }
+        }
     }
 }
+
+
+// {
+//     if (!item) {
+//         return;
+//     }
+    
+//     // 创建DO模块配置对话框
+//     DOModuleConfigDialog dialog(m_doModule);
+    
+//     if (dialog.exec() == QDialog::Accepted) {
+//         // 配置已保存，可以在这里更新项目树中的组件信息
+//         // 例如，更新组件名称或图标等
+//     }
+// }
 
 void ComponentManager::showDeleteComponentDialog(QStandardItem *item)
 {

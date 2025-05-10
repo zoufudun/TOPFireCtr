@@ -17,12 +17,23 @@
 #include "domodule.h"  // 添加DO模块头文件
 
 // 组件信息结构体
+// 添加通信方式枚举
+enum CommunicationType {
+    TCP,
+    UDP,
+    CAN,
+    MODBUS_485,
+    ETHERCAT
+};
+
+// 在ComponentInfo结构体中添加通信方式字段
 struct ComponentInfo {
     QString name;
     QString type;
-    QString description;
-    int level;
     QString iconPath;
+    int level;
+    CommunicationType communicationType; // 添加通信方式
+    QString description;
 };
 
 class ComponentManager : public QObject
@@ -50,6 +61,8 @@ signals:
     void componentAdded(const ComponentInfo &component);
     void componentDeleted(QStandardItem *item);
     void componentMoved(QStandardItem *item, QStandardItem *newParent);
+    void componentOrderChanged(QStandardItem *parent, int oldIndex, int newIndex);
+    void componentConfigured(QStandardItem *item);  // Add this line
     void componentOrderChanged(QStandardItem *item, bool moveUp);
 
 private:

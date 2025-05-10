@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -48,3 +48,6 @@ OTHER_FILES += \
     themes/default.qss \
     themes/atom_one.qss \
     themes/solarized_light.qss
+
+CODECFORTR = UTF-8
+CODECFORSRC = UTF-8

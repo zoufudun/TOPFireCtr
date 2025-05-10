@@ -32,13 +32,14 @@ private slots:
     void onComponentAdded(const ComponentInfo &component);
     void onComponentDeleted(QStandardItem *item);
     void onComponentMoved(QStandardItem *item, QStandardItem *newParent);
-
+    void onComponentConfigured(QStandardItem *item);
     void moveComponentUp();
     void moveComponentDown();
-    void onComponentOrderChanged(QStandardItem *item, bool moveUp);
+    void onComponentOrderChanged(QStandardItem *parent, int oldIndex, int newIndex);
 
 private:
     void showProjectContextMenu(const QPoint &pos);
+    void updatePropertiesView(QStandardItem *item);  // Add this declaration
     void changeTheme();
     void setDefaultTheme();
     void setAtomOneTheme();
