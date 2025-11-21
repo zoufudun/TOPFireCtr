@@ -10,6 +10,7 @@
  * @LastEditors: PhodonZou
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @LastEditTime: 2025-05-07 19:20:55
  */
 =======
@@ -61,6 +62,8 @@ struct ComponentInfo {
 #include "dimodule.h"  // 添加DI模块头文件
 #include "domodule.h"  // 添加DO模块头文件
 
+=======
+>>>>>>> 10671c5 (添加LOOPModule)
 // 组件信息结构体
 struct ComponentInfo {
 <<<<<<< HEAD
