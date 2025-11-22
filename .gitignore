@@ -11,6 +11,18 @@
 *.gch
 *.pch
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# Linker files
+*.ilk
+
+# Debugger Files
+*.pdb
+
+=======
+>>>>>>> 758dc91 (Initial commit)
+>>>>>>> 4e41f48 (Initial Commit2)
 # Compiled Dynamic libraries
 *.so
 *.dylib
@@ -30,3 +42,12 @@
 *.exe
 *.out
 *.app
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+# debug information files
+*.dwo
+=======
+>>>>>>> 758dc91 (Initial commit)
+>>>>>>> 4e41f48 (Initial Commit2)
