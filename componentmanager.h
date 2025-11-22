@@ -3,11 +3,12 @@
 =======
 >>>>>>> d0afa2c (组件实现双击添加)
 /*
- * @Description: 
+ * @Description:
  * @Version: 1.0
  * @Autor: PhodonZou
  * @Date: 2025-05-07 11:48:40
  * @LastEditors: PhodonZou
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -83,16 +84,38 @@ struct ComponentInfo {
     int level;
     QString iconPath;
 >>>>>>> c7c6830 (增加DI模块配置界面)
+=======
+ * @LastEditTime: 2025-05-07 19:20:55
+ */
+#ifndef COMPONENTMANAGER_H
+#define COMPONENTMANAGER_H
+
+#include "dimodule.h"   // 添加DI模块头文件
+#include "domodule.h"   // 添加DO模块头文件
+#include "loopmodule.h" // 添加回路模块头文件
+#include <QList>
+#include <QObject>
+#include <QStandardItem>
+#include <QString>
+
+// 组件信息结构体
+struct ComponentInfo {
+  QString name;
+  QString type;
+  QString description;
+  int level;
+  QString iconPath;
+>>>>>>> ccb7348 (Initial Commit)
 };
 
-class ComponentManager : public QObject
-{
-    Q_OBJECT
+class ComponentManager : public QObject {
+  Q_OBJECT
 
 public:
-    explicit ComponentManager(QObject *parent = nullptr);
-    ~ComponentManager();
+  explicit ComponentManager(QObject *parent = nullptr);
+  ~ComponentManager();
 
+<<<<<<< HEAD
     void showAddComponentDialog();
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -186,6 +209,43 @@ private:
 >>>>>>> c7c6830 (增加DI模块配置界面)
 =======
 >>>>>>> b4ce964 (增加DO模块配置界面)
+=======
+  void showAddComponentDialog();
+  void showConfigureComponentDialog(QStandardItem *item = nullptr);
+  void showDeleteComponentDialog(QStandardItem *item);
+  void showMoveComponentDialog(QStandardItem *item);
+  void moveComponentUp(QStandardItem *item);
+  void moveComponentDown(QStandardItem *item);
+  // 添加DI模块配置对话框
+  void showDIModuleConfigDialog(QStandardItem *item);
+
+  // 添加DO模块配置对话框
+  void showDOModuleConfigDialog(QStandardItem *item);
+
+  // 添加回路模块配置对话框
+  void showLoopModuleConfigDialog(QStandardItem *item);
+
+  QList<ComponentInfo> getComponentTypes() const;
+
+signals:
+  void componentAdded(const ComponentInfo &component);
+  void componentDeleted(QStandardItem *item);
+  void componentMoved(QStandardItem *item, QStandardItem *newParent);
+  void componentOrderChanged(QStandardItem *item, bool moveUp);
+
+private:
+  void initializeComponentTypes();
+  QList<ComponentInfo> m_componentTypes;
+
+  // 添加DI模块实例
+  DIModule *m_diModule;
+
+  // 添加DO模块实例
+  DOModule *m_doModule;
+
+  // 添加回路模块实例
+  LoopModule *m_loopModule;
+>>>>>>> ccb7348 (Initial Commit)
 };
 
 #endif // COMPONENTMANAGER_H

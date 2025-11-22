@@ -1,8 +1,12 @@
-QT       += core gui
+QT       += core gui xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
+
+# 替换为你的实际路径
+LIBS += -L"D:/Soft/Qt/5.15.2/mingw81_64/lib" -lqscintilla2_qt5
+INCLUDEPATH += "D:/Soft/Qt/5.15.2/mingw81_64/include/Qsci"
 
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
@@ -24,6 +28,11 @@ SOURCES += \
     domodule.cpp \
     domoduleconfigdialog.cpp \
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    loopmodule.cpp \
+    loopmoduleconfigdialog.cpp \
+>>>>>>> ccb7348 (Initial Commit)
     main.cpp \
     mainwindow.cpp \
     projectmanager.cpp \
@@ -35,6 +44,8 @@ HEADERS += \
     dimoduleconfigdialog.h \
     domodule.h \
     domoduleconfigdialog.h \
+    loopmodule.h \
+    loopmoduleconfigdialog.h \
     mainwindow.h \
     projectmanager.h \
     thememanager.h

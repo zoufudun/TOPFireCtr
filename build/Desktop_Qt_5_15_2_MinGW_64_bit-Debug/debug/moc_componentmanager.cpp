@@ -7,7 +7,11 @@
 *****************************************************************************/
 
 #include <memory>
+<<<<<<< HEAD
 #include "../../../componentmanager.h"
+=======
+#include "M:/ControllerIDE/componentmanager.h"
+>>>>>>> ccb7348 (Initial Commit)
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
@@ -22,8 +26,13 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_ComponentManager_t {
+<<<<<<< HEAD
     QByteArrayData data[16];
     char stringdata0[193];
+=======
+    QByteArrayData data[12];
+    char stringdata0[148];
+>>>>>>> ccb7348 (Initial Commit)
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -43,19 +52,27 @@ QT_MOC_LITERAL(7, 89, 4), // "item"
 QT_MOC_LITERAL(8, 94, 14), // "componentMoved"
 QT_MOC_LITERAL(9, 109, 9), // "newParent"
 QT_MOC_LITERAL(10, 119, 21), // "componentOrderChanged"
+<<<<<<< HEAD
 QT_MOC_LITERAL(11, 141, 6), // "parent"
 QT_MOC_LITERAL(12, 148, 8), // "oldIndex"
 QT_MOC_LITERAL(13, 157, 8), // "newIndex"
 QT_MOC_LITERAL(14, 166, 19), // "componentConfigured"
 QT_MOC_LITERAL(15, 186, 6) // "moveUp"
+=======
+QT_MOC_LITERAL(11, 141, 6) // "moveUp"
+>>>>>>> ccb7348 (Initial Commit)
 
     },
     "ComponentManager\0componentAdded\0\0"
     "ComponentInfo\0component\0componentDeleted\0"
     "QStandardItem*\0item\0componentMoved\0"
+<<<<<<< HEAD
     "newParent\0componentOrderChanged\0parent\0"
     "oldIndex\0newIndex\0componentConfigured\0"
     "moveUp"
+=======
+    "newParent\0componentOrderChanged\0moveUp"
+>>>>>>> ccb7348 (Initial Commit)
 };
 #undef QT_MOC_LITERAL
 
@@ -65,11 +82,16 @@ static const uint qt_meta_data_ComponentManager[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
+<<<<<<< HEAD
        6,   14, // methods
+=======
+       4,   14, // methods
+>>>>>>> ccb7348 (Initial Commit)
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
+<<<<<<< HEAD
        6,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
@@ -79,14 +101,27 @@ static const uint qt_meta_data_ComponentManager[] = {
       10,    3,   55,    2, 0x06 /* Public */,
       14,    1,   62,    2, 0x06 /* Public */,
       10,    2,   65,    2, 0x06 /* Public */,
+=======
+       4,       // signalCount
+
+ // signals: name, argc, parameters, tag, flags
+       1,    1,   34,    2, 0x06 /* Public */,
+       5,    1,   37,    2, 0x06 /* Public */,
+       8,    2,   40,    2, 0x06 /* Public */,
+      10,    2,   45,    2, 0x06 /* Public */,
+>>>>>>> ccb7348 (Initial Commit)
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
     QMetaType::Void, 0x80000000 | 6,    7,
     QMetaType::Void, 0x80000000 | 6, 0x80000000 | 6,    7,    9,
+<<<<<<< HEAD
     QMetaType::Void, 0x80000000 | 6, QMetaType::Int, QMetaType::Int,   11,   12,   13,
     QMetaType::Void, 0x80000000 | 6,    7,
     QMetaType::Void, 0x80000000 | 6, QMetaType::Bool,    7,   15,
+=======
+    QMetaType::Void, 0x80000000 | 6, QMetaType::Bool,    7,   11,
+>>>>>>> ccb7348 (Initial Commit)
 
        0        // eod
 };
@@ -100,9 +135,13 @@ void ComponentManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         case 0: _t->componentAdded((*reinterpret_cast< const ComponentInfo(*)>(_a[1]))); break;
         case 1: _t->componentDeleted((*reinterpret_cast< QStandardItem*(*)>(_a[1]))); break;
         case 2: _t->componentMoved((*reinterpret_cast< QStandardItem*(*)>(_a[1])),(*reinterpret_cast< QStandardItem*(*)>(_a[2]))); break;
+<<<<<<< HEAD
         case 3: _t->componentOrderChanged((*reinterpret_cast< QStandardItem*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3]))); break;
         case 4: _t->componentConfigured((*reinterpret_cast< QStandardItem*(*)>(_a[1]))); break;
         case 5: _t->componentOrderChanged((*reinterpret_cast< QStandardItem*(*)>(_a[1])),(*reinterpret_cast< bool(*)>(_a[2]))); break;
+=======
+        case 3: _t->componentOrderChanged((*reinterpret_cast< QStandardItem*(*)>(_a[1])),(*reinterpret_cast< bool(*)>(_a[2]))); break;
+>>>>>>> ccb7348 (Initial Commit)
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -129,6 +168,7 @@ void ComponentManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
             }
         }
         {
+<<<<<<< HEAD
             using _t = void (ComponentManager::*)(QStandardItem * , int , int );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&ComponentManager::componentOrderChanged)) {
                 *result = 3;
@@ -146,6 +186,11 @@ void ComponentManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
             using _t = void (ComponentManager::*)(QStandardItem * , bool );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&ComponentManager::componentOrderChanged)) {
                 *result = 5;
+=======
+            using _t = void (ComponentManager::*)(QStandardItem * , bool );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&ComponentManager::componentOrderChanged)) {
+                *result = 3;
+>>>>>>> ccb7348 (Initial Commit)
                 return;
             }
         }
@@ -181,6 +226,7 @@ int ComponentManager::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
+<<<<<<< HEAD
         if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
         _id -= 6;
@@ -188,6 +234,15 @@ int ComponentManager::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         if (_id < 6)
             *reinterpret_cast<int*>(_a[0]) = -1;
         _id -= 6;
+=======
+        if (_id < 4)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 4;
+    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 4)
+            *reinterpret_cast<int*>(_a[0]) = -1;
+        _id -= 4;
+>>>>>>> ccb7348 (Initial Commit)
     }
     return _id;
 }
@@ -214,6 +269,7 @@ void ComponentManager::componentMoved(QStandardItem * _t1, QStandardItem * _t2)
 }
 
 // SIGNAL 3
+<<<<<<< HEAD
 void ComponentManager::componentOrderChanged(QStandardItem * _t1, int _t2, int _t3)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t3))) };
@@ -232,6 +288,12 @@ void ComponentManager::componentOrderChanged(QStandardItem * _t1, bool _t2)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
     QMetaObject::activate(this, &staticMetaObject, 5, _a);
+=======
+void ComponentManager::componentOrderChanged(QStandardItem * _t1, bool _t2)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
+    QMetaObject::activate(this, &staticMetaObject, 3, _a);
+>>>>>>> ccb7348 (Initial Commit)
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE
